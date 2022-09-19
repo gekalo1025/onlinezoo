@@ -19,6 +19,7 @@ const config = {
   devServer: {
     open: true,
     host: "localhost",
+    compress: true,
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -28,6 +29,7 @@ const config = {
     // Add your plugins here
     // Learn more about plugins from https://webpack.js.org/configuration/plugins/
   ],
+
   module: {
     rules: [
       {
@@ -60,8 +62,8 @@ const config = {
         use: [stylesHandler, "css-loader", "sass-loader"],
       },
       {
-        test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
-        type: "asset",
+        test: /\.(jpe?g|png|jpg|gif|svg)$/i,
+        type: "asset/resource",
       },
 
       // Add your rules for custom modules here
