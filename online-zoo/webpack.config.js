@@ -15,6 +15,7 @@ const config = {
   devtool: "source-map",
   output: {
     path: path.resolve(__dirname, "dist"),
+    assetModuleFilename: "images/[name].[ext]",
   },
   devServer: {
     open: true,
@@ -44,6 +45,26 @@ const config = {
           },
         ],
       },
+      {
+        test: /\.html$/,
+        use: [
+          {
+            loader: "html-loader",
+          },
+        ],
+      },
+      // {
+      //   test: /\.html/,
+      //   use: [
+      //     {
+      //       loader: "file-loader",
+      //       options: {
+      //         name: "[name].[ext]",
+      //       },
+      //     },
+      //   ],
+      //   exclude: path.resolve(__dirname, "src/index.html"),
+      // },
       {
         test: /\.js$/,
         exclude: /node_modules/,
