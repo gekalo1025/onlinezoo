@@ -14,12 +14,14 @@
 
     &__logo {
         position: relative;
-        padding: 3.5px;
+        padding: 3.5px 4.75px;
+
         border: 1px solid #ffffff;
         a {
             color: #ffffff;
             text-decoration: none;
             h1 {
+                margin: 0;
                 text-align: center;
                 font-size: 19px;
                 font-weight: 400;
@@ -28,7 +30,7 @@
         &::after {
             content: "";
             position: absolute;
-            bottom: 20px;
+            bottom: 10px;
             left: 10px;
             background-image: url("../../assets/icons/bamboo.svg");
             background-size: cover;
@@ -42,23 +44,15 @@
     &__menu {
         padding-left: 63px;
     }
-
-    &__text {
-        a {
-            color: #ffffff;
-            text-decoration: none;
-            &:hover {
-                color: $ORANGE_COLOR;
-            }
-        }
-        padding-left: 438px;
-    }
 }
 .menu {
 }
 .menu-nav {
     display: flex;
     gap: 58px;
+    li:nth-last-child(1) {
+        padding-left: 380px;
+    }
 }
 .menu-item {
     list-style: none;
