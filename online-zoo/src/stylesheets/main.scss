@@ -9,7 +9,8 @@
 @import "base/base", "base/fonts", "base/typography", "base/helpers";
 
 // 4. Layout-related sections
-@import "layout/header", "layout/footer", "layout/favorite-animal", "layout/backstage", "layout/pets";
+@import "layout/header", "layout/footer", "layout/favorite-animal", "layout/backstage", "layout/pets",
+    "layout/pick-friend";
 
 // 5. Components
 @import "components/button";

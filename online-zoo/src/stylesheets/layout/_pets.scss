@@ -5,7 +5,7 @@
         position: absolute;
         width: 450px;
         height: 450px;
-        bottom: 4%;
+        bottom: 0%;
         left: -12%;
         background-image: url("../assets/images/palm_foto.svg");
         background-repeat: no-repeat;
@@ -17,7 +17,7 @@
         position: absolute;
         width: 280px;
         height: 280px;
-        bottom: 3%;
+        bottom: 0%;
         left: 78%;
         background-image: url("../assets/images/strelitzia.svg");
         background-repeat: no-repeat;
@@ -33,7 +33,7 @@
     }
 
     &__button.button-oval {
-        margin: 60px auto 140px auto;
+        margin: 60px auto 100px auto;
         padding: 16px 57px 16px 60px;
         background: #fe9013;
     }
