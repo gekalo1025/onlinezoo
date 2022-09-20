@@ -10,10 +10,10 @@
 
 // 4. Layout-related sections
 @import "layout/header", "layout/footer", "layout/favorite-animal", "layout/backstage", "layout/pets",
-    "layout/pick-friend";
+    "layout/pick-friend", "layout/testimonials";
 
 // 5. Components
-@import "components/button";
+@import "components/button", "components/slider";
 
 // 6. Page-specific styles
 @import "pages/home";

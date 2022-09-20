@@ -1,0 +1,110 @@
+.testimonials {
+    margin: 140px 0px 204px 0px;
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: -52.5%;
+        left: 86.5%;
+        width: 410px;
+        height: 410px;
+        background-image: url("../assets/images/leav_foto.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    &__title {
+        h2 {
+            margin: 0;
+            font-size: 36px;
+            line-height: 130%;
+            text-align: center;
+        }
+        padding-bottom: 47px;
+    }
+
+    &__slider {
+        display: flex;
+        gap: 30px;
+        margin-bottom: 15px;
+    }
+    .slider__range-conteiner {
+        text-align: center;
+        margin-bottom: 27px;
+    }
+    &__button {
+        padding: 16px 85px;
+    }
+}
+.testimonials-card {
+    background: #f1f3f2;
+    position: relative;
+    border-radius: 20px;
+    width: 268px;
+    height: 391px;
+    // padding-bottom: 19px;
+    overflow: hidden;
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: #f1f3f2;
+        width: 268px;
+        height: 19px;
+    }
+    &__info {
+        display: flex;
+        gap: 10px;
+        padding-left: 16px;
+        padding-top: 15px;
+        padding-bottom: 10px;
+    }
+    &__data {
+    }
+
+    &__photo {
+    }
+
+    &__name {
+        font-size: 16px;
+        line-height: 120%;
+        color: #000000;
+    }
+
+    &__location {
+        position: relative;
+        display: inline-block;
+        font-size: 15px;
+        line-height: 120%;
+        color: #bdbdbd;
+        padding-right: 16px;
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 0%;
+            transform: translate(-50%, -50%);
+            width: 3px;
+            height: 3px;
+            border-radius: 50%;
+            background-color: #bdbdbd;
+        }
+    }
+
+    &__time-publication {
+        display: inline-block;
+        font-weight: 300;
+        font-size: 15px;
+        line-height: 120%;
+        color: #bdbdbd;
+    }
+
+    &__body {
+        font-weight: 300;
+        font-size: 15px;
+        line-height: 120%;
+        color: #767474;
+        padding: 0px 15px;
+    }
+}
