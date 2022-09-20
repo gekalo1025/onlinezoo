@@ -13,58 +13,10 @@
         align-items: center;
         position: relative;
     }
-
-    &__logo {
-        position: relative;
-        padding: 3.5px 4.75px;
-
-        border: 1px solid #ffffff;
-        a {
-            color: $text-color2;
-            h1 {
-                margin: 0;
-                line-height: 120%;
-                text-align: center;
-                font-size: 19px;
-                font-weight: 400;
-            }
-        }
-        &::after {
-            content: "";
-            position: absolute;
-            bottom: 10px;
-            left: 11px;
-            background-image: url("../assets/icons/bamboo.svg");
-            background-size: cover;
-            background-repeat: no-repeat;
-            width: 10px;
-            height: 20px;
-            color: $text-color2;
-        }
-    }
-
     &__menu {
         padding-left: 63px;
-    }
-}
-.menu-nav {
-    display: flex;
-    gap: 58px;
-    align-items: center;
-    flex-wrap: nowrap;
-    li:nth-last-child(1) {
-        padding-left: 380px;
-    }
-}
-.menu-item {
-    list-style: none;
-}
-.menu-link {
-    color: $text-color2;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 140%;
-    &:hover {
-        color: $brand-color;
+        li:nth-last-child(1) {
+            padding-left: 380px;
+        }
     }
 }

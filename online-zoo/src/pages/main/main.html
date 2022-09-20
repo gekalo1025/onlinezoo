@@ -10,7 +10,7 @@
     <div class="wrapper">
       <header class="header">
         <div class="container header__container">
-          <div class="header__logo">
+          <div class="logo">
             <a href=""
               ><h1>
                 PetStory <br />
@@ -20,20 +20,20 @@
           </div>
           <div class="header__menu menu">
             <nav class="menu-nav">
-              <li class="menu-item">
-                <a href="#" class="menu-link">About</a>
+              <li class="menu-nav__item">
+                <a href="#" class="menu-nav__link">About</a>
               </li>
-              <li class="menu-item"><a href="#" class="menu-link">Map</a></li>
-              <li class="menu-item"><a href="#" class="menu-link">Zoos</a></li>
-              <li class="menu-item">
-                <a href="#" class="menu-link">Donate</a>
+              <li class="menu-nav__item"><a href="#" class="menu-nav__link">Map</a></li>
+              <li class="menu-nav__item"><a href="#" class="menu-nav__link">Zoos</a></li>
+              <li class="menu-nav__item">
+                <a href="#" class="menu-nav__link">Donate</a>
               </li>
-              <li class="menu-item">
-                <a href="#" class="menu-link">Contact us</a>
+              <li class="menu-nav__item">
+                <a href="#" class="menu-nav__link">Contact us</a>
               </li>
-              <li class="menu-item">
+              <li class="menu-nav__item">
                 <a
-                  class="menu-link"
+                  class="menu-nav__link"
                   target="_blank"
                   href="https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online"
                 >
@@ -278,7 +278,71 @@ The best online zoo I’ve met. My son delighted very much ljves to watch gouill
           </section>
 
       </main>
-      <footer class="footer"></footer>
+      <footer class="footer">
+        <div class="container">
+<div class="footer__first-row">
+  <div class="logo">
+    <a href="#"><h1>PetStory<br />online</h1></a>
+  </div>
+
+  <div class="subscribe-form">
+    <label class="subscribe-form__title" for="subscribe">Subscribe to our news</label>
+
+    <form  id="subscribe"><!--  вставить action="/action_page.php" method="get"  -->
+    <input class="subscribe-form__input" type="email" name="subscribe" id="subscribe" placeholder="Enter your email">
+    <button class="subscribe-form__button" type="submit" form="subscribe" value="Submit">Submit</button>
+     </form>
+
+  </div>
+
+</div>
+<div class="footer__second-row">
+  <button class="footer__button button ">donate for volunteers</button>
+
+</div>
+<div class="footer__third-row">
+
+  <ul class="social-list">
+    <li class="social-link ">
+      <div class="social__icons"><img src="../../assets/icons/social-link-icons/facebook.svg" alt="facebook"></div>
+      <a target="_blank" href="https://www.facebook.com/">Facebook</a>
+      
+    </li>
+    <li class="social-link ">
+      <div class="social__icons"><img src="../../assets/icons/social-link-icons/twiter.svg" alt="twitter"></div>
+      <a target="_blank" href="https://twitter.com/">Twitter</a>
+    </li>
+    <li class="social-link ">
+      <div class="social__icons"><img src="../../assets/icons/social-link-icons/Instagram.svg" alt="Instagram"></div>
+      <a target="_blank" href="https://instagram.com/">Instagram</a>
+    </li>
+    <li class="social-link ">
+      <div class="social__icons"><img src="../../assets/icons/social-link-icons/YouTube.svg" alt="YouTube"></div>
+      <a target="_blank"  href="https://youtube.com/">YouTube</a>
+    </li>
+  </ul>
+
+  <nav class="menu-nav footer__menu-nav ">
+    <li class="menu-item">
+      <a href="#" class="menu-link">About</a>
+    </li>
+    <li class="menu-item"><a href="#" class="menu-link">Map</a></li>
+    <li class="menu-item"><a href="#" class="menu-link">Zoos</a></li>
+    <li class="menu-item">
+      <a href="#" class="menu-link">Contact us</a>
+    </li>
+  </nav>
+
+  <div class="footer__designed">
+    <a href="">Designed by Alisa Samborskaya</a>
+    <a href="">©RSSchool & ©Yem Digital 2021</a>
+  </div>
+  
+
+</div>
+
+        </div>
+      </footer>
     </div>
   </body>
 </html>

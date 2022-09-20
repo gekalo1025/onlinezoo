@@ -1,0 +1,30 @@
+.logo {
+    position: relative;
+    padding: 3.5px 4.75px;
+    height: 54.6px;
+
+    border: 1px solid #ffffff;
+    a {
+        color: $text-color2;
+        h1 {
+            margin: 0;
+            padding: 0;
+            line-height: 120%;
+            text-align: center;
+            font-size: 19px;
+            font-weight: 400;
+        }
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 10px;
+        left: 11px;
+        background-image: url("../assets/icons/bamboo.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 10px;
+        height: 20px;
+        color: $text-color2;
+    }
+}

@@ -1,0 +1,18 @@
+.menu-nav {
+    display: flex;
+    gap: 58px;
+    align-items: center;
+    flex-wrap: nowrap;
+    &__item {
+        list-style: none;
+    }
+    &__link {
+        color: $text-color2;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 140%;
+        &:hover {
+            color: $brand-color;
+        }
+    }
+}
