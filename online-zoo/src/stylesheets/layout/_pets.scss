@@ -1,0 +1,104 @@
+.pets {
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        width: 450px;
+        height: 450px;
+        bottom: 4%;
+        left: -12%;
+        background-image: url("../assets/images/palm_foto.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 100%;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        width: 280px;
+        height: 280px;
+        bottom: 3%;
+        left: 78%;
+        background-image: url("../assets/images/strelitzia.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 100%;
+    }
+
+    &__cards-row {
+        display: flex;
+        row-gap: 20px;
+        column-gap: 30px;
+        flex-wrap: wrap;
+    }
+
+    &__button.button-oval {
+        margin: 60px auto 140px auto;
+        padding: 16px 57px 16px 60px;
+        background: #fe9013;
+    }
+}
+
+.pet-card {
+    border: 1px solid #fe9013;
+    border-radius: 5px;
+    width: calc((100% - 60px) / 3);
+    &:hover {
+        .pet-card__image img {
+            transform: scale(1.2);
+        }
+        // .pet-card__description {
+        //     padding: 0px 14px 10px 16px;
+        // }
+        // .pet-card__icon {
+        //     visibility: visible;
+        //     opacity: 1;
+        // }
+        // .pet-card__text {
+        //     visibility: visible;
+        //     opacity: 1;
+        // }
+    }
+    &__image {
+        width: 100%;
+        display: inline-block;
+        overflow: hidden;
+        text-align: center;
+        img {
+            transition: transform 1s;
+            width: 100%;
+        }
+    }
+
+    &__description {
+        margin-top: -1px;
+        padding: 0px 14px 10px 16px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__text {
+        // visibility: hidden;
+        // opacity: 0;
+    }
+
+    &__name {
+        margin: 0;
+        font-weight: 500;
+        line-height: 140%;
+        text-transform: uppercase;
+        font-size: 16px;
+        color: #000000;
+    }
+
+    &__location {
+        margin: 0;
+        font-weight: 300;
+        font-size: 15px;
+        line-height: 120%;
+        color: #000000;
+    }
+    &__icon {
+        // visibility: hidden;
+        // opacity: 0;
+    }
+}

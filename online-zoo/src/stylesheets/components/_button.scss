@@ -23,3 +23,42 @@
         background: #4b9200;
     }
 }
+.button-arrow-left {
+    img {
+        display: block;
+        margin: 40% auto;
+        transform: rotate(180deg);
+    }
+    background-color: $brand-color;
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    position: absolute;
+    top: 38%;
+    left: 6.45%;
+    transform: translate(0%, -50%);
+    border: none;
+    transition: background-color 0.4s;
+    &:active {
+        background-color: #4b9200;
+    }
+}
+.button-arrow-rigth {
+    img {
+        display: block;
+        margin: 40% auto;
+    }
+    background-color: $brand-color;
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    position: absolute;
+    top: 38%;
+    right: 6.45%;
+    transform: translate(0%, -50%);
+    border: none;
+    transition: background-color 0.4s;
+    &:active {
+        background-color: #4b9200;
+    }
+}
