@@ -16,10 +16,10 @@
         &::after {
             content: "";
             position: absolute;
-            top: 12px;
-            right: 95px;
+            top: 11px;
+            right: 109px;
             z-index: -1;
-            background: $brand-color;
+            background: $brand-color-gradient;
             width: 465px;
             height: 465px;
             border-radius: 50%;
@@ -31,18 +31,18 @@
         margin: 0;
         font-weight: 700;
         font-size: 106.496px;
-        line-height: 80px;
-        // line-height: 75%;
+        line-height: 75%;
         text-align: center;
         text-transform: uppercase;
         padding-bottom: 60px;
+        padding-right: 10px;
         span {
             color: $yellow-color;
         }
     }
 
     &__button {
-        padding: 16px 97px;
+        padding: 16px 100px;
         display: block;
         margin: 0 auto;
     }

@@ -10,9 +10,12 @@
     color: white;
     text-align: center;
     text-transform: uppercase;
-    background: $brand-color;
+    background: $brand-color-gradient;
     transition: all 0.4s;
     border: none;
+    &:disabled {
+        background: #767474;
+    }
     &:hover {
         background: #e47209;
     }
