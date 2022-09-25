@@ -10,26 +10,41 @@ const stylesHandler = isProduction
   ? MiniCssExtractPlugin.loader
   : "style-loader";
 
+const pages = ["home", "donate"];
+
 const config = {
-  entry: "./src/pages/main/main.js",
+  entry: pages.reduce((config, page) => {
+    config[page] = `./src/pages/${page}/${page}.js`;
+    return config;
+  }, {}),
+
   devtool: "source-map",
   output: {
     path: path.resolve(__dirname, "dist"),
     assetModuleFilename: "images/[name].[ext]",
+  },
+  optimization: {
+    splitChunks: {
+      chunks: "all",
+    },
   },
   devServer: {
     open: true,
     host: "localhost",
     compress: true,
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: "src/pages/main/main.html",
-    }),
-
-    // Add your plugins here
-    // Learn more about plugins from https://webpack.js.org/configuration/plugins/
-  ],
+  plugins: [].concat(
+    pages.map(
+      (page) =>
+        new HtmlWebpackPlugin({
+          inject: true,
+          template: `./src/pages/${page}/${page}.html`,
+          filename: `${page}.html`,
+          chunks: [page],
+        })
+    )
+    // <- here goes array(s) of other plugins
+  ),
 
   module: {
     rules: [
@@ -48,14 +63,17 @@ const config = {
       {
         test: /\.html$/,
         use: [
+          // {
+          //   loader: "file-loader",
+          //   options: {
+          //     name: "[name].[ext]",
+          //   },
+          // },
           {
-            loader: "file-loader",
-            options: {
-              name: "[name].[ext]",
-            },
+            loader: "html-loader",
           },
         ],
-        exclude: path.resolve(__dirname, "src/pages/main/main.html"),
+        // exclude: path.resolve(__dirname, "src/pages/main/main.html"),
       },
       {
         test: /\.js$/,
