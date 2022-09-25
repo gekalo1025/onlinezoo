@@ -14,7 +14,10 @@
     appearance: none;
     width: 115px;
     height: 6px;
-    border-radius: 5%;
+    border-radius: 5px;
     background: #fe9013;
     cursor: pointer;
+    &:hover {
+        background: #e47209;
+    }
 }
