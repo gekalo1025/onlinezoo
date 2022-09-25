@@ -88,11 +88,14 @@
         display: flex;
         justify-content: center;
         gap: 30px;
-        margin-bottom: 60px;
+        margin-bottom: 65px;
     }
 
     &__card {
         width: 168px;
+        p {
+            margin: 0;
+        }
         .pick-friend__card-icon {
             position: relative;
             height: 168px;
@@ -116,6 +119,7 @@
     }
 
     &__card-text {
+        padding-top: 8px;
     }
 
     &__card-icon {
