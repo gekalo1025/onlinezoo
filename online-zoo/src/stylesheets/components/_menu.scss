@@ -7,12 +7,22 @@
         list-style: none;
     }
     &__link {
-        color: $text-color2;
         font-weight: 500;
         font-size: 16px;
         line-height: 140%;
+        color: $text-color2;
+        background-image: none;
+        &.active {
+            pointer-events: none;
+            cursor: default;
+            color: transparent;
+            background-image: $brand-color-gradient;
+            -webkit-background-clip: text;
+        }
         &:hover {
-            color: $brand-color;
+            color: transparent;
+            background-image: $brand-color-gradient;
+            -webkit-background-clip: text;
         }
     }
 }
