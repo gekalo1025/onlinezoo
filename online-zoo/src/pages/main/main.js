@@ -1,2 +1,2 @@
-// import "./main.html";
 import "../../stylesheets/main.scss";
+import "../donate/donate.html";

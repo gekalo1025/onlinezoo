@@ -49,22 +49,14 @@ const config = {
         test: /\.html$/,
         use: [
           {
-            loader: "html-loader",
+            loader: "file-loader",
+            options: {
+              name: "[name].[ext]",
+            },
           },
         ],
+        exclude: path.resolve(__dirname, "src/pages/main/main.html"),
       },
-      // {
-      //   test: /\.html/,
-      //   use: [
-      //     {
-      //       loader: "file-loader",
-      //       options: {
-      //         name: "[name].[ext]",
-      //       },
-      //     },
-      //   ],
-      //   exclude: path.resolve(__dirname, "src/index.html"),
-      // },
       {
         test: /\.js$/,
         exclude: /node_modules/,
