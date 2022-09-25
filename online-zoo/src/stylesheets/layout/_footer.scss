@@ -41,6 +41,14 @@
                 a {
                     color: #ffffff;
                 }
+                &:active {
+                    a {
+                        color: #4b9200;
+                    }
+                    .social__icons {
+                        background-color: #4b9200;
+                    }
+                }
             }
             .social__icons {
                 position: relative;
@@ -70,6 +78,10 @@
             &:last-child {
                 padding-bottom: 0;
             }
+            &:active {
+                color: #4b9200;
+                text-decoration: underline;
+            }
         }
     }
     &__menu-nav {
@@ -80,6 +92,19 @@
         }
         a {
             color: #ffffff;
+            background-image: none;
+            &:hover {
+                color: transparent;
+                background-image: $brand-color-gradient;
+                -webkit-background-clip: text;
+            }
+            &.active {
+                pointer-events: none;
+                cursor: default;
+                color: transparent;
+                background-image: $brand-color-gradient;
+                -webkit-background-clip: text;
+            }
         }
     }
 }
@@ -93,36 +118,52 @@
     }
     &__input {
         background-color: inherit;
-        border: 1px solid #f9804b;
         margin-top: 13px;
         margin-right: 10px;
         padding: 7px 27px 10px 10px;
-        color: #bdbdbd;
         &:placeholder-shown {
             font-weight: 400;
             font-size: 16px;
             line-height: 140%;
             color: #bdbdbd;
         }
-        &:active {
-            border-color: #4b9200;
-        }
-        &:invalid {
-            border-color: #d31414;
-            color: #d31414;
-        }
     }
     &__button {
         padding: 10px 39px;
         background: #f1f3f2;
-        border: 1px solid #4b9200;
         border-radius: 5px;
-        &:active {
-            color: #4b9200;
+    }
+    .subscribe-submit {
+        &:valid {
+            .subscribe-form__button {
+                border: 1px solid #333b41;
+            }
+            .subscribe-form__input {
+                border-radius: 5px;
+                color: #bdbdbd;
+                border: 1px solid #f9804b;
+            }
         }
         &:invalid {
-            border-color: #d31414;
-            color: #d31414;
+            .subscribe-form__button {
+                border: 1px solid #d31414;
+                color: #d31414;
+            }
+            .subscribe-form__input {
+                border-radius: 5px;
+                color: #d31414;
+                border: 1px solid #d31414;
+            }
+        }
+        &:active {
+            .subscribe-form__button {
+                border: 1px solid #4b9200;
+                color: #4b9200;
+            }
+            .subscribe-form__input {
+                border-radius: 5px;
+                border: 1px solid #4b9200;
+            }
         }
     }
 }
