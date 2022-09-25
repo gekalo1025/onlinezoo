@@ -1,9 +1,9 @@
 .backstage {
     background-image: url(../assets/images/flower_foto1.png);
     background-repeat: no-repeat;
-    background-position: right -3% bottom 90%;
+    background-position: right 0% bottom 89%;
     padding-top: 140px;
-    margin-bottom: 159px;
+    padding-bottom: 159px;
     .layout-two-columns-backstage {
         gap: 87px;
     }
@@ -40,6 +40,8 @@
     }
 
     &__text {
-        line-height: 140%;
+        p {
+            line-height: 140%;
+        }
     }
 }
