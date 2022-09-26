@@ -142,8 +142,10 @@
                 border-radius: 5px;
                 color: #bdbdbd;
                 border: 1px solid #f9804b;
+                outline: none;
             }
         }
+
         &:invalid {
             .subscribe-form__button {
                 border: 1px solid #d31414;
@@ -153,6 +155,7 @@
                 border-radius: 5px;
                 color: #d31414;
                 border: 1px solid #d31414;
+                outline: none;
             }
         }
         &:active {
@@ -163,6 +166,7 @@
             .subscribe-form__input {
                 border-radius: 5px;
                 border: 1px solid #4b9200;
+                outline: none;
             }
         }
     }
