@@ -1,6 +1,12 @@
 // -----------------------------------------------------------------------------
 // This file contains styles that are specific to the home page.
 // -----------------------------------------------------------------------------
-.home-page {
-    // flex-grow: 1;
+.donate-page {
+    .favorite-animal {
+        height: 386px;
+        background-position: center;
+    }
 }
+
+// 4. Layout-related sections
+@import "../layout/donations";

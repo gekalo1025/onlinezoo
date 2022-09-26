@@ -1,0 +1,303 @@
+@import "../abstracts/variables";
+.donations {
+    background: linear-gradient(
+            315.75deg,
+            rgba(254, 210, 144, 0.7) 30.06%,
+            #febdab 100.95%,
+            rgba(254, 210, 144, 0.7) 106.36%
+        ),
+        linear-gradient(
+            315.75deg,
+            rgba(254, 189, 171, 0.74) 30.06%,
+            rgba(243, 169, 248, 0.66) 50.74%,
+            #e0d8f0 80.49%,
+            #eaf7fe 127.9%,
+            #eaf7fe 149.54%
+        ),
+        linear-gradient(
+            315.75deg,
+            rgba(254, 189, 171, 0.74) 30.06%,
+            rgba(243, 169, 248, 0.66) 50.74%,
+            #e0d8f0 80.49%,
+            #eaf7fe 127.9%,
+            #eaf7fe 149.54%
+        );
+    padding: 40px 0 180px 0;
+    &__need-help {
+        margin-bottom: 43px;
+    }
+
+    &__title {
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 130%;
+        color: #fe9013;
+        margin-bottom: 60px;
+    }
+
+    &__feed-friend {
+        background: rgba(255, 255, 255, 0.52);
+        backdrop-filter: blur(2px);
+        border-radius: 20px;
+    }
+}
+.need-help {
+    &__title {
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 130%;
+        color: #ffffff;
+        margin: 0 0 10px 0;
+    }
+
+    &__text {
+        margin: 0;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 140%;
+        color: #ffffff;
+    }
+}
+.feed-friend {
+    &__title {
+        margin: 0 0 20px 0;
+        font-weight: 400;
+        font-size: 48px;
+        line-height: 120%;
+        text-align: center;
+        color: #fe9013;
+    }
+
+    &__text {
+        margin: 0 0 63px 0;
+        font-size: 24px;
+        line-height: 120%;
+        color: $text-color;
+    }
+
+    &__amount-donation-money {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin-bottom: 40px;
+    }
+
+    &__number-daily-eats {
+        position: relative;
+        padding-right: 64px;
+        transform: translate(-9%, 26%);
+        .number-daily-eats__number {
+            font-weight: 500;
+            font-size: 72px;
+            line-height: 80%;
+            text-align: center;
+            text-transform: uppercase;
+            color: #000000;
+            padding-bottom: 11px;
+        }
+        .number-daily-eats__text {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 140%;
+            text-align: center;
+            color: $text-color;
+        }
+        &::after {
+            content: "";
+            background-image: url(../../assets/icons/x_icon.svg);
+            position: absolute;
+            top: 28%;
+            left: 76%;
+            width: 14px;
+            height: 14px;
+        }
+    }
+
+    &__icons {
+    }
+    &__input-container {
+        width: 100%;
+        // height: 10px;
+        background: #404950;
+        border-radius: 2px;
+        padding: 12px 30px;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        margin-bottom: 12px;
+        &::before {
+            content: "";
+            position: absolute;
+
+            top: 50%;
+            transform: translateY(-50%);
+            width: 95%;
+            height: 2px;
+            background-color: #72828e;
+        }
+    }
+
+    &__radio {
+        position: relative;
+    }
+
+    &__container {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 976px;
+        padding-top: 40px;
+        padding-bottom: 62px;
+    }
+    &__input-title {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 140%;
+        color: #000000;
+        margin-bottom: 20px;
+    }
+    &__number {
+        display: flex;
+        margin-bottom: 50px;
+
+        justify-content: space-between;
+        span {
+            display: inline-block;
+            font-weight: 500;
+            font-size: 26px;
+            line-height: 140%;
+            text-transform: uppercase;
+            color: #333b41;
+        }
+    }
+}
+
+.radio-label {
+    position: relative;
+    // display: block;
+    // padding: 20px;
+    .radio-title {
+        cursor: pointer;
+        position: relative;
+        top: 200%;
+        right: 1%;
+        font-weight: 500;
+        font-size: 26px;
+        line-height: 140%;
+        text-transform: uppercase;
+        color: #333b41;
+    }
+    .custom-radio-btn-conteiner {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: #ffee2e;
+        height: 10px;
+        width: 10px;
+        border-radius: 50%;
+        cursor: pointer;
+        .custom-radio-btn-relative {
+            position: relative;
+            display: block;
+        }
+        .custom-radio-btn {
+            &::before {
+                content: "";
+                padding: 40px;
+                position: absolute;
+                top: -35px;
+                right: -35px;
+                background-image: url("../../assets/icons/roller_icon.svg");
+                width: 40px;
+                height: 40px;
+                opacity: 0;
+                background-repeat: no-repeat;
+                background-position: center;
+                transition: 0.2s ease-in;
+            }
+        }
+    }
+}
+
+.another-amount__form {
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        right: 38%;
+        top: 25%;
+        width: 10px;
+        height: 20px;
+        background-image: url("../../assets/icons/$.svg");
+    }
+}
+.another-amount__input {
+    position: relative;
+    display: block;
+    margin: 0 auto 25px auto;
+    box-sizing: border-box;
+    width: 268px;
+    background-color: transparent;
+    border: 2px solid #929699;
+    padding: 16px 0px 16px 9px;
+    &::-webkit-inner-spin-button {
+        display: none;
+    }
+    &:hover {
+        &::-webkit-inner-spin-button {
+            display: none;
+        }
+    }
+}
+.another-amount__donation-frequency {
+    max-width: 218px;
+    display: flex;
+    gap: 50px;
+    margin: 0 auto 31px auto;
+    label {
+        cursor: pointer;
+        font-size: 16px;
+        line-height: 140%;
+        color: $text-color;
+    }
+}
+.another-amount__button {
+    display: block;
+    margin: 0 auto;
+    padding: 16px 70px;
+}
+.another__text {
+    text-align: center;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: $text-color;
+}
+.real-radio-btn {
+    /* Скрываем реальную радио кнопку*/
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    opacity: 0;
+
+    &:checked + .custom-radio-btn-conteiner .custom-radio-btn-relative .custom-radio-btn:before {
+        opacity: 1;
+    }
+    &:checked + .another-amount__custom-radio-btn {
+        border: 1px solid #4b9200;
+        background-color: #4b9200;
+    }
+}
+.another-amount__custom-radio-btn {
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    border: 1px solid #fe9013;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    vertical-align: text-top;
+    margin-right: 10px;
+    &::before {
+    }
+}
