@@ -80,7 +80,7 @@
         justify-content: center;
         align-items: center;
 
-        margin-bottom: 40px;
+        margin-bottom: 37px;
     }
 
     &__number-daily-eats {
@@ -121,18 +121,18 @@
         // height: 10px;
         background: #404950;
         border-radius: 2px;
-        padding: 12px 30px;
+        padding: 4px 40px 4px 26px;
         display: flex;
         justify-content: space-between;
         position: relative;
-        margin-bottom: 12px;
+        margin-bottom: 100px;
         &::before {
             content: "";
             position: absolute;
 
             top: 50%;
             transform: translateY(-50%);
-            width: 95%;
+            width: 94%;
             height: 2px;
             background-color: #72828e;
         }
@@ -140,6 +140,12 @@
 
     &__radio {
         position: relative;
+        label:has(input:checked) {
+            .radio-title {
+                transition: color 0.2s;
+                color: #fe9013;
+            }
+        }
     }
 
     &__container {
@@ -154,7 +160,7 @@
         font-size: 16px;
         line-height: 140%;
         color: #000000;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
     }
     &__number {
         display: flex;
@@ -174,13 +180,12 @@
 
 .radio-label {
     position: relative;
-    // display: block;
-    // padding: 20px;
+
     .radio-title {
         cursor: pointer;
-        position: relative;
+        position: absolute;
         top: 200%;
-        right: 1%;
+        right: -45px;
         font-weight: 500;
         font-size: 26px;
         line-height: 140%;
@@ -224,8 +229,8 @@
     &::after {
         content: "";
         position: absolute;
-        right: 38%;
-        top: 25%;
+        right: 37.2%;
+        top: 10%;
         width: 10px;
         height: 20px;
         background-image: url("../../assets/icons/$.svg");
@@ -252,8 +257,8 @@
 .another-amount__donation-frequency {
     max-width: 218px;
     display: flex;
-    gap: 50px;
-    margin: 0 auto 31px auto;
+    gap: 42px;
+    margin: 0 auto 29px auto;
     label {
         cursor: pointer;
         font-size: 16px;
@@ -264,9 +269,10 @@
 .another-amount__button {
     display: block;
     margin: 0 auto;
-    padding: 16px 70px;
+    padding: 16px 80px 16px 70px;
 }
 .another__text {
+    margin: 30px 0px 0px 0px;
     text-align: center;
     font-weight: 400;
     font-size: 16px;
@@ -279,7 +285,6 @@
     width: 0;
     height: 0;
     opacity: 0;
-
     &:checked + .custom-radio-btn-conteiner .custom-radio-btn-relative .custom-radio-btn:before {
         opacity: 1;
     }
@@ -297,7 +302,7 @@
     width: 16px;
     height: 16px;
     vertical-align: text-top;
-    margin-right: 10px;
+    margin-right: 8px;
     &::before {
     }
 }

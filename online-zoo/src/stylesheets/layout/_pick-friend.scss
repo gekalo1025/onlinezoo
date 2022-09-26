@@ -73,6 +73,9 @@
             border-bottom: 1px #fe9013 solid;
             padding-bottom: 2px;
             color: $text-color;
+            &:hover {
+                color: $brand-color;
+            }
         }
     }
 
@@ -100,6 +103,7 @@
             position: relative;
             height: 168px;
             border-radius: 5px;
+            background-color: white;
             border: 1px solid #f9804b;
             margin-bottom: 30px;
             img {

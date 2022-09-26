@@ -1,5 +1,5 @@
 .testimonials {
-    margin: 140px 0px 180px 0px;
+    margin: 136px 0px 180px 0px;
     position: relative;
     &::after {
         content: "";
@@ -44,15 +44,7 @@
     width: 268px;
     height: 391px;
     overflow: hidden;
-    // &::after {
-    //     content: "";
-    //     position: absolute;
-    //     bottom: 0;
-    //     left: 0;
-    //     background-color: #f1f3f2;
-    //     width: 268px;
-    //     height: 19px;
-    // }
+    line-height: 180%;
     &::before {
         content: "";
         position: absolute;
@@ -76,23 +68,29 @@
         gap: 10px;
         padding-left: 16px;
         padding-top: 15px;
-        padding-bottom: 10px;
+        padding-bottom: 5px;
     }
     &__data {
     }
 
     &__photo {
+        img {
+            width: 100%;
+            display: block;
+        }
     }
 
     &__name {
         font-size: 16px;
         line-height: 120%;
         color: #000000;
+        margin-bottom: -6px;
     }
 
     &__location {
         position: relative;
         display: inline-block;
+        font-weight: 300;
         font-size: 15px;
         line-height: 120%;
         color: #bdbdbd;
@@ -121,7 +119,7 @@
     &__body {
         font-weight: 300;
         font-size: 15px;
-        line-height: 120%;
+        line-height: 114%;
         color: #767474;
         padding: 0px 15px 0px 15px;
     }
