@@ -1,10 +1,16 @@
 // -----------------------------------------------------------------------------
 // This file contains styles that are specific to the home page.
 // -----------------------------------------------------------------------------
+@import "../abstracts/variables";
 .donate-page {
     .favorite-animal {
         height: 386px;
         background-position: center;
+        @media (min-width: $breakpoints-large) and (max-width: 1250px) {
+            background-size: 161% auto;
+            background-position: -179px;
+            height: 390px;
+        }
     }
 }
 
