@@ -10,6 +10,9 @@
         justify-content: space-between;
         margin-bottom: 36px;
         position: relative;
+        @media (min-width: $breakpoints-large) and (max-width: 1250px) {
+            padding-right: 30px;
+        }
     }
 
     &__second-row {
@@ -105,6 +108,16 @@
                 background-image: $brand-color-gradient;
                 -webkit-background-clip: text;
             }
+        }
+        @media (min-width: $breakpoints-large) and (max-width: 1250px) {
+            margin-left: -24px;
+        }
+    }
+
+    @media (min-width: $breakpoints-large) and (max-width: 1250px) {
+        .container {
+            max-width: $breakpoints-large;
+            padding: 0 18px 0 43px; /* 1 */
         }
     }
 }

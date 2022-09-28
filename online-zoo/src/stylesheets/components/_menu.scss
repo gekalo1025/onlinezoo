@@ -1,8 +1,10 @@
 .menu-nav {
     display: flex;
-    gap: 58px;
+    // gap: 58px;
+    @include adaptiv-value(gap, 58, 37, 1);
     align-items: center;
     flex-wrap: nowrap;
+
     &__item {
         list-style: none;
     }
@@ -25,4 +27,6 @@
             -webkit-background-clip: text;
         }
     }
+}
+@media (max-width: $breakpoints-large) {
 }

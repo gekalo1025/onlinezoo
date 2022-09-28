@@ -11,6 +11,7 @@
         position: relative;
         padding-top: 86px;
         padding-bottom: 100px;
+        padding-right: 10px;
         z-index: 1;
 
         &::after {
@@ -30,12 +31,12 @@
         color: $text-color2;
         margin: 0;
         font-weight: 700;
-        font-size: 106.496px;
+        @include adaptiv-value("font-size", 106.495, 60, 1);
         line-height: 75%;
         text-align: center;
         text-transform: uppercase;
         padding-bottom: 60px;
-        padding-right: 10px;
+        padding-right: 0px;
         span {
             color: $yellow-color;
         }
@@ -45,5 +46,34 @@
         padding: 16px 92px;
         display: block;
         margin: 0 auto;
+    }
+}
+@media (min-width: $breakpoints-large) and (max-width: 1300px) {
+    .favorite-animal {
+        background-position: bottom;
+        background-size: 120% auto;
+        &__block {
+            padding-right: 40px;
+            padding-top: 39px;
+            padding-bottom: 49px;
+            z-index: 1;
+
+            &::after {
+                z-index: -1;
+                top: -12px;
+                right: 149px;
+                width: 365px;
+                height: 365px;
+            }
+        }
+        &__button {
+            padding: 16px 92px;
+            display: block;
+            margin: 0 0 0 43px;
+        }
+        &__title {
+            padding-bottom: 44px;
+            padding-right: 25px;
+        }
     }
 }

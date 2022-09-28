@@ -4,6 +4,8 @@
 @import "../abstracts/variables";
 
 .header {
+    position: relative;
+    z-index: 2;
     flex: 0 0 auto;
     background-color: #000000;
     padding: 13px 0;
@@ -15,8 +17,10 @@
     }
     &__menu {
         padding-left: 63px;
+        white-space: nowrap;
         li:nth-last-child(1) {
-            padding-left: 380px;
+            @include adaptiv-value("padding-left", 380, 20, 1);
+            // padding-left: 380px;
         }
     }
 }

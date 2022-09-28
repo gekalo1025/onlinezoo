@@ -25,6 +25,24 @@
   // padding-right: 20px; /* 3 */
   width: 100%; /* 1 */
 }
+@media (min-width: $breakpoints-large) and (max-width: 1250px) {
+  .container {
+    max-width: $breakpoints-large;
+    padding: 0 30px; /* 1 */
+  }
+}
+@media (max-width: $breakpoints-medium) {
+  .container {
+    max-width: $breakpoints-medium;
+    padding: 0 20px; /* 1 */
+  }
+}
+@media (max-width: $breakpoints-small) {
+  .container {
+    max-width: $breakpoints-small;
+    padding: 0 10px; /* 1 */
+  }
+}
 
 /**
  * Hide text while making it readable for screen readers

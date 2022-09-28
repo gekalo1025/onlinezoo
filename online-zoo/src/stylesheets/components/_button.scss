@@ -45,6 +45,14 @@
     &:active {
         background: #4b9200;
     }
+    @media (min-width: $breakpoints-large) and (max-width: 1599px) {
+        top: 37%;
+        left: 35.3%;
+    }
+    // @media (max-width: $breakpoints-large) {
+    //     top: 37%;
+    //     left: 35.3%;
+    // }
 }
 .button-arrow-rigth {
     img {
@@ -64,4 +72,12 @@
     &:active {
         background: #4b9200;
     }
+    @media (min-width: $breakpoints-large) and (max-width: 1599px) {
+        top: 37%;
+        right: 35.2%;
+    }
+    // @media (max-width: $breakpoints-large) {
+    //     top: 37%;
+    //     right: 35.2%;
+    // }
 }

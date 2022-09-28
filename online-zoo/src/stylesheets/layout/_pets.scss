@@ -1,4 +1,6 @@
 .pets {
+    @media (max-width: $breakpoints-large) {
+    }
     position: relative;
     &::after {
         content: "";
@@ -10,6 +12,10 @@
         background-image: url("../assets/images/palm_foto.svg");
         background-repeat: no-repeat;
         background-size: contain;
+        @media (min-width: $breakpoints-large) and (max-width: 1599px) {
+            height: 203px;
+            left: 0%;
+        }
     }
     &::before {
         content: "";
@@ -21,6 +27,10 @@
         background-image: url("../assets/images/strelitzia.svg");
         background-repeat: no-repeat;
         background-size: contain;
+        @media (min-width: $breakpoints-large) and (max-width: 1599px) {
+            height: 184px;
+            left: 75.5%;
+        }
     }
 
     &__cards-row {
@@ -28,9 +38,49 @@
         row-gap: 20px;
         column-gap: 30px;
         flex-wrap: wrap;
+        @media (min-width: $breakpoints-large) and (max-width: 1599px) {
+            row-gap: 93px;
+        }
         form {
             display: block;
             margin: 0 auto;
+        }
+        .pet-card_one {
+            order: 1;
+        }
+        .pet-card_two {
+            order: 2;
+        }
+        .pet-card_three {
+            order: 3;
+            @media (max-width: $breakpoints-large) {
+                order: 5;
+            }
+        }
+        .pet-card_four {
+            order: 4;
+            @media (max-width: $breakpoints-large) {
+                display: none;
+            }
+        }
+        .pet-card_five {
+            order: 5;
+            @media (max-width: $breakpoints-large) {
+                order: 3;
+            }
+        }
+        .pet-card_six {
+            order: 6;
+        }
+        .pets__form-button {
+            order: 20;
+        }
+        .pet-card_seven {
+            display: none;
+            @media (max-width: $breakpoints-large) {
+                display: block;
+                order: 5;
+            }
         }
     }
 
@@ -40,6 +90,9 @@
         margin: 60px auto 100px auto;
         padding: 16px 57px 16px 60px;
         background: #fe9013;
+        @media (max-width: $breakpoints-large) {
+            margin: -10px auto 140px auto;
+        }
     }
 }
 
@@ -48,6 +101,7 @@
     border: 1px solid #fe9013;
     border-radius: 5px;
     width: calc((100% - 60px) / 3);
+
     &:hover {
         cursor: pointer;
         .pet-card__image img {
@@ -58,6 +112,9 @@
             top: 50%;
             visibility: visible;
             opacity: 1;
+            @media (min-width: $breakpoints-large) and (max-width: 1599px) {
+                top: 30%;
+            }
         }
         .pet-card__image {
             transition: background-color 0.5s;
