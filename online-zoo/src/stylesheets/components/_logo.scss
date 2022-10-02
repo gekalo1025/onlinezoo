@@ -50,3 +50,20 @@
         border: 0;
     }
 }
+.footer .logo {
+    @media (width: 320px) {
+        border: 0;
+        background-position: center;
+        background-image: url("../assets/images/logo.svg");
+        height: 20px;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: contain;
+        a {
+            display: none;
+        }
+        &::after {
+            display: none;
+        }
+    }
+}

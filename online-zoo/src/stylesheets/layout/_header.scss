@@ -9,7 +9,7 @@
     flex: 0 0 auto;
     background-color: #000000;
     padding: 13px 0;
-    @media (min-width: $breakpoints-medium) and (max-width: 800px) {
+    @media (min-width: $breakpoints-small) and (max-width: 800px) {
         padding: 2.5px 0;
         position: fixed;
         // top: 0;
@@ -21,7 +21,7 @@
         display: flex;
         align-items: center;
         position: relative;
-        @media (min-width: $breakpoints-medium) and (max-width: 800px) {
+        @media (min-width: $breakpoints-small) and (max-width: 800px) {
             justify-content: space-between;
         }
     }
@@ -30,7 +30,7 @@
         background-image: url(../assets/icons/burger_menu.svg);
         width: 18px;
         height: 10px;
-        @media (min-width: $breakpoints-medium) and (max-width: 800px) {
+        @media (min-width: $breakpoints-small) and (max-width: 800px) {
             display: block;
         }
     }
@@ -41,7 +41,7 @@
             @include adaptiv-value("padding-left", 380, 211, 1600, 1000);
             @include adaptiv-value("padding-left", 150, 1, 999, 800);
         }
-        @media (min-width: $breakpoints-medium) and (max-width: 800px) {
+        @media (min-width: $breakpoints-small) and (max-width: 800px) {
             display: none;
         }
     }

@@ -6,6 +6,8 @@
     @include adaptiv-value("padding-top", 100, 0, 1000, 640);
     @include adaptiv-value("padding-bottom", 161, 126, 1600, 1000);
     @include adaptiv-value("padding-bottom", 126, 63, 1000, 640);
+    @include adaptiv-value("padding-top", 100, 104, 640, 320);
+
     .layout-two-columns-backstage {
         gap: 87px;
     }
@@ -27,9 +29,13 @@
             margin: 0;
             font-weight: 400;
             font-size: 48px;
+            @include adaptiv-value("font-size", 48, 24, 640, 320);
             line-height: 120%;
         }
         padding-bottom: 20px;
+        @media (min-width: $breakpoints-small) and (max-width: 639px) {
+            padding-bottom: 9px;
+        }
     }
 
     &__subtitle {
@@ -37,6 +43,9 @@
         padding-bottom: 54px;
         @media (min-width: $breakpoints-medium) and (max-width: 999px) {
             padding-bottom: 32px;
+        }
+        @media (min-width: $breakpoints-small) and (max-width: 639px) {
+            padding-bottom: 22px;
         }
     }
 
@@ -48,11 +57,19 @@
         @media (min-width: $breakpoints-medium) and (max-width: 999px) {
             margin: 0px 0px 18px 0px;
         }
+        @media (min-width: $breakpoints-small) and (max-width: 639px) {
+            margin: 0px 0px 8px 0px;
+        }
     }
 
     &__text {
         font-size: 16px;
         line-height: 140%;
+        @media (min-width: $breakpoints-small) and (max-width: 639px) {
+            p {
+                margin: 0;
+            }
+        }
     }
 }
 
@@ -87,5 +104,16 @@
         padding-top: 60px;
         background-position: right -6% top -3%;
         background-size: 25%;
+    }
+}
+@media (min-width: $breakpoints-small) and (max-width: 639px) {
+    .layout-two-columns__one-column {
+        display: none;
+    }
+    .backstage {
+        padding-top: 105px;
+        background-position: right -17% top 8%;
+        background-size: 23%;
+        padding-bottom: 37px;
     }
 }

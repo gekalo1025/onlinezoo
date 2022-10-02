@@ -16,6 +16,11 @@
             padding-right: 30px;
         }
     }
+    .logo {
+        @media (min-width: $breakpoints-small) and (max-width: 639px) {
+            margin-bottom: 52px;
+        }
+    }
 
     &__second-row {
         .footer__button {
@@ -25,6 +30,9 @@
         margin-bottom: 30px;
         @media (min-width: $breakpoints-medium) and (max-width: 999px) {
             margin-bottom: 64px;
+        }
+        @media (min-width: $breakpoints-small) and (max-width: 639px) {
+            margin-bottom: 109px;
         }
     }
 
@@ -42,6 +50,15 @@
                 top: 4%;
                 margin: 0;
             }
+            @media (min-width: $breakpoints-small) and (max-width: 639px) {
+                display: flex;
+                position: absolute;
+                top: 16.5%;
+                left: 50%;
+                transform: translateX(-47%);
+                justify-content: space-between;
+                gap: 17px;
+            }
             .social-link {
                 display: flex;
                 gap: 12px;
@@ -58,8 +75,8 @@
                 }
                 a {
                     color: #ffffff;
-                    @media (min-width: $breakpoints-medium) and (max-width: 999px) {
-                        display: none;
+                    @media (min-width: $breakpoints-small) and (max-width: 999px) {
+                        font-size: 0px;
                     }
                 }
                 &:active {
@@ -85,8 +102,7 @@
                 border-radius: 50%;
             }
         }
-        // @media (min-width: $breakpoints-medium) and (max-width: 999px) {
-        //     justify-content: flex-start;
+        // @media (min-width: $breakpoints-small) and (max-width: 639px) {
         // }
     }
     &__designed {
@@ -99,6 +115,10 @@
             font-size: 16px;
             line-height: 130%;
             color: #ffffff;
+            @media (min-width: $breakpoints-small) and (max-width: 639px) {
+                font-size: 15px;
+                line-height: 120%;
+            }
             &:last-child {
                 padding-bottom: 0;
             }
@@ -107,10 +127,21 @@
                 text-decoration: underline;
             }
         }
+        @media (min-width: $breakpoints-small) and (max-width: 639px) {
+            position: absolute;
+            font-size: 15px;
+            line-height: 120%;
+            top: 64.6%;
+            right: 4%;
+        }
     }
     .menu-nav {
         @media (min-width: $breakpoints-medium) and (max-width: 999px) {
             gap: 37px;
+        }
+        @media (min-width: $breakpoints-small) and (max-width: 639px) {
+            margin-left: 11px;
+            gap: 30px;
         }
     }
     &__menu-nav {
@@ -155,6 +186,10 @@
     @media (min-width: $breakpoints-medium) and (max-width: 999px) {
         margin-top: -20px;
         padding-top: 10px;
+    }
+    @media (min-width: $breakpoints-small) and (max-width: 639px) {
+        padding-top: 20px;
+        padding-bottom: 5px;
     }
 }
 
@@ -219,7 +254,7 @@
             }
         }
     }
-    @media (min-width: $breakpoints-medium) and (max-width: 999px) {
+    @media (min-width: $breakpoints-small) and (max-width: 999px) {
         display: none;
     }
 }

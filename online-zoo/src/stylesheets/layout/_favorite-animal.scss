@@ -24,6 +24,8 @@
             @include adaptiv-value("height", 465, 367, 1600, 1000);
             @include adaptiv-value("width", 367, 237.6, 1000, 640);
             @include adaptiv-value("height", 367, 237.6, 1000, 640);
+            @include adaptiv-value("width", 237.6, 119, 640, 320);
+            @include adaptiv-value("height", 237.6, 119, 640, 320);
             border-radius: 50%;
         }
     }
@@ -34,6 +36,7 @@
         font-weight: 700;
         @include adaptiv-value("font-size", 106.495, 85, 1600, 1000);
         @include adaptiv-value("font-size", 85, 54.29, 1000, 640);
+        @include adaptiv-value("font-size", 54.29, 27.21, 640, 320);
         line-height: 75%;
         text-align: center;
         text-transform: uppercase;
@@ -95,6 +98,37 @@
             right: 110%;
         }
         &__button {
+        }
+        &__title {
+            padding-bottom: 0px;
+        }
+    }
+}
+@media (max-width: 639px) {
+    .favorite-animal {
+        height: 221px;
+        background-size: 120% auto;
+        background-position: bottom;
+        &__block {
+            margin-top: 76px;
+            margin-bottom: 32px;
+            padding-right: 0px;
+            margin-right: 3px;
+            &::after {
+                top: -20px;
+                right: 26px;
+            }
+        }
+        .favorite-animal__form {
+            position: relative;
+            bottom: 3%;
+            right: 110%;
+        }
+        &__button {
+            display: none;
+            // position: relative;
+            // right: 1%;
+            // top: 1%;
         }
         &__title {
             padding-bottom: 0px;

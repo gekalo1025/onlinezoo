@@ -17,6 +17,10 @@
         @media (min-width: $breakpoints-medium) and (max-width: 999px) {
             height: 199px;
         }
+        @media (min-width: $breakpoints-small) and (max-width: 639px) {
+            height: 73px;
+            left: -4%;
+        }
     }
     &::before {
         content: "";
@@ -35,6 +39,10 @@
         @media (min-width: $breakpoints-medium) and (max-width: 999px) {
             height: 130px;
             left: 72.5%;
+        }
+        @media (min-width: $breakpoints-small) and (max-width: 639px) {
+            height: 66px;
+            left: 78%;
         }
     }
 
@@ -79,13 +87,13 @@
             @media (max-width: $breakpoints-large) {
                 order: 3;
             }
-            @media (min-width: $breakpoints-medium) and (max-width: 999px) {
+            @media (min-width: $breakpoints-small) and (max-width: 999px) {
                 display: none;
             }
         }
         .pet-card_six {
             order: 6;
-            @media (min-width: $breakpoints-medium) and (max-width: 999px) {
+            @media (min-width: $breakpoints-small) and (max-width: 999px) {
                 display: none;
             }
         }
@@ -113,6 +121,10 @@
         @media (min-width: $breakpoints-medium) and (max-width: 999px) {
             margin: 0 auto 99px auto;
         }
+        @media (max-width: 639px) {
+            padding: 14px 56px 16px 60px;
+            margin: 0px auto 61px auto;
+        }
     }
 }
 
@@ -123,6 +135,10 @@
     width: calc((100% - 60px) / 3);
     @media (min-width: $breakpoints-medium) and (max-width: 999px) {
         width: calc((100% - 30px) / 2);
+    }
+    @media (min-width: $breakpoints-small) and (max-width: 639px) {
+        width: 100%;
+        margin: 0 7px;
     }
 
     &:hover {
@@ -164,6 +180,9 @@
         @media (min-width: $breakpoints-medium) and (max-width: 999px) {
             padding: 0 7px 0 11px;
         }
+        @media (min-width: $breakpoints-small) and (max-width: 639px) {
+            padding: 0px 15px 8px 11px;
+        }
     }
     &__text {
         // visibility: hidden;
@@ -177,18 +196,29 @@
         text-transform: uppercase;
         color: #000000;
         @include adaptiv-value(" font-size", 16, 12.4695, 1000, 640);
+        @media (min-width: $breakpoints-small) and (max-width: 639px) {
+            font-size: 12.47px;
+        }
     }
 
     &__location {
         margin: 0;
         font-weight: 300;
         @include adaptiv-value(" font-size", 15, 11.69, 1000, 640);
+        @include adaptiv-value(" font-size", 11.69, 11.69, 640, 320);
         line-height: 120%;
         color: #000000;
     }
     &__icon {
+        img {
+            width: 100%;
+        }
         @media (min-width: $breakpoints-medium) and (max-width: 999px) {
             width: 35px;
+        }
+        @media (min-width: $breakpoints-small) and (max-width: 639px) {
+            width: 25px;
+            height: 25px;
         }
     }
     &__popup {
