@@ -27,6 +27,9 @@
     @media (min-width: $breakpoints-large) and (max-width: 1199px) {
         padding: 30px 30px 50px 30px;
     }
+    @media (min-width: $breakpoints-medium) and (max-width: 999px) {
+        padding: 20px 0;
+    }
     .container {
         background: rgba(253, 253, 255, 0.52);
         backdrop-filter: blur(2px);
@@ -37,6 +40,9 @@
             padding-top: 30px;
             padding-bottom: 50px;
         }
+        @media (min-width: $breakpoints-medium) and (max-width: 999px) {
+            padding: 0px 20px 60px 20px;
+        }
     }
     &__content {
     }
@@ -45,6 +51,7 @@
         margin-top: 31px;
         font-weight: 400;
         font-size: 48px;
+        @include adaptiv-value("font-size", 48, 42, 1000, 640);
         line-height: 120%;
         text-align: center;
         color: #fe9013;
@@ -53,6 +60,10 @@
             margin-top: 0px;
             margin-bottom: -5px;
         }
+        @media (min-width: $breakpoints-medium) and (max-width: 999px) {
+            padding-top: 10px;
+            margin: 0px 0px 0px 0px;
+        }
     }
 
     &__text {
@@ -60,11 +71,18 @@
             padding-left: 99px;
             font-weight: 400;
             font-size: 24px;
+
             line-height: 120%;
             margin-bottom: 40px;
             @media (min-width: $breakpoints-large) and (max-width: 1199px) {
                 padding-left: 19px;
                 margin-bottom: 20px;
+            }
+            @media (min-width: $breakpoints-medium) and (max-width: 999px) {
+                font-size: 22px;
+                padding-left: 0px;
+                margin-top: 20px;
+                margin-bottom: 19px;
             }
         }
         .text2 {
@@ -77,17 +95,24 @@
                 padding-left: 19px;
                 padding-right: 46px;
             }
+            @media (min-width: $breakpoints-medium) and (max-width: 999px) {
+                padding-left: 0px;
+            }
         }
         .text3 {
             padding-left: 99px;
             font-weight: 400;
             font-size: 16px;
             line-height: 130%;
-            margin-bottom: 50px;
+            margin-bottom: 60px;
             @media (min-width: $breakpoints-large) and (max-width: 1199px) {
                 padding-left: 19px;
                 padding-right: 1px;
                 margin-bottom: 40px;
+            }
+            @media (min-width: $breakpoints-medium) and (max-width: 999px) {
+                padding-left: 0px;
+                margin-bottom: 28px;
             }
         }
         a {
@@ -107,6 +132,10 @@
         font-size: 36px;
         line-height: 130%;
         margin-bottom: 40px;
+        @media (min-width: $breakpoints-medium) and (max-width: 999px) {
+            margin-top: 0px;
+            margin-bottom: 20px;
+        }
     }
 
     &__row-cards {
@@ -114,8 +143,14 @@
         justify-content: center;
         gap: 30px;
         margin-bottom: 65px;
+        position: relative;
         @media (min-width: $breakpoints-large) and (max-width: 1199px) {
             margin-bottom: 77px;
+        }
+        @media (min-width: $breakpoints-medium) and (max-width: 999px) {
+            justify-content: start;
+            margin-bottom: 45px;
+            gap: 42px;
         }
     }
 
@@ -138,12 +173,29 @@
                 transform: translate(-50%, -50%);
                 margin: 0 auto;
             }
+            @media (min-width: $breakpoints-medium) and (max-width: 999px) {
+                margin-bottom: 25px;
+            }
         }
     }
     &__arrow {
         align-self: center;
         transform: translateY(-90%);
-        img {
+        @media (min-width: $breakpoints-medium) and (max-width: 999px) {
+            position: absolute;
+            z-index: 2;
+        }
+    }
+    &__arrow2 {
+        @media (min-width: $breakpoints-medium) and (max-width: 999px) {
+            top: 5%;
+            left: 58%;
+        }
+    }
+    &__arrow1 {
+        @media (min-width: $breakpoints-medium) and (max-width: 999px) {
+            top: 5%;
+            right: 62%;
         }
     }
 

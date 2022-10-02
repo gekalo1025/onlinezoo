@@ -49,10 +49,10 @@
         top: 37%;
         left: 35.3%;
     }
-    // @media (max-width: $breakpoints-large) {
-    //     top: 37%;
-    //     left: 35.3%;
-    // }
+    @media (min-width: $breakpoints-medium) and (max-width: 999px) {
+        top: 38.5%;
+        left: 38.1%;
+    }
 }
 .button-arrow-rigth {
     img {
@@ -76,8 +76,8 @@
         top: 37%;
         right: 35.2%;
     }
-    // @media (max-width: $breakpoints-large) {
-    //     top: 37%;
-    //     right: 35.2%;
-    // }
+    @media (min-width: $breakpoints-medium) and (max-width: 999px) {
+        top: 38.5%;
+        right: 38.1%;
+    }
 }

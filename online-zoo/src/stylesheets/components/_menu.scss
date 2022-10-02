@@ -1,7 +1,6 @@
 .menu-nav {
     display: flex;
-    // gap: 58px;
-    @include adaptiv-value(gap, 58, 37, 1);
+    @include adaptiv-value(gap, 58, 48, 1600, 1000);
     align-items: center;
     flex-wrap: nowrap;
 
@@ -27,6 +26,4 @@
             -webkit-background-clip: text;
         }
     }
-}
-@media (max-width: $breakpoints-large) {
 }

@@ -1,9 +1,10 @@
 .testimonials {
-    margin: 136px 0px 180px 0px;
+    @include adaptiv-value("margin-top", 136, 100, 1600, 1000);
+    @include adaptiv-value("margin-bottom", 180, 140, 1600, 1000);
+    @include adaptiv-value("margin-top", 100, 60, 1000, 640);
+    @include adaptiv-value("margin-bottom", 140, 100, 1000, 640);
     position: relative;
-    @media (min-width: $breakpoints-large) and (max-width: 1199px) {
-        margin: 100px 0px 140px 0px;
-    }
+
     &::after {
         content: "";
         position: absolute;
@@ -19,6 +20,11 @@
             left: 80%;
             width: 198px;
         }
+        @media (min-width: $breakpoints-medium) and (max-width: 999px) {
+            width: 120px;
+            bottom: -67%;
+            left: 82%;
+        }
     }
 
     &__title {
@@ -27,9 +33,13 @@
             font-size: 36px;
             line-height: 130%;
             text-align: center;
+            font-weight: 400;
         }
         padding-bottom: 47px;
         @media (min-width: $breakpoints-large) and (max-width: 1199px) {
+            padding-bottom: 30px;
+        }
+        @media (min-width: $breakpoints-medium) and (max-width: 999px) {
             padding-bottom: 30px;
         }
     }
@@ -38,6 +48,10 @@
         display: flex;
         gap: 30px;
         margin-bottom: 15px;
+        @media (min-width: $breakpoints-medium) and (max-width: 999px) {
+            flex-direction: column;
+            gap: 15px;
+        }
     }
     .slider__range-conteiner {
         text-align: center;
@@ -45,9 +59,17 @@
         @media (min-width: $breakpoints-large) and (max-width: 1199px) {
             margin-bottom: 47px;
         }
+        @media (min-width: $breakpoints-medium) and (max-width: 999px) {
+            display: none;
+        }
     }
     &__button {
         padding: 16px 85px;
+        @media (min-width: $breakpoints-medium) and (max-width: 999px) {
+            padding: 16px 55px;
+            margin: 40px auto 0 auto;
+            display: block;
+        }
     }
 }
 .testimonials-card {
@@ -58,6 +80,7 @@
     width: 268px;
     height: 391px;
     overflow: hidden;
+    font-size: 16px;
     line-height: 180%;
     &:nth-child(3) {
         display: none;
@@ -73,6 +96,23 @@
             display: block;
         }
         width: 293px;
+    }
+    @media (min-width: $breakpoints-medium) and (max-width: 999px) {
+        width: 100%;
+        height: 109px;
+        font-size: 15px;
+        line-height: 120%;
+        &:last-child {
+            display: none;
+        }
+        &::after {
+            content: "";
+            background: #f1f3f2;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            padding: 6px;
+        }
     }
     &::before {
         content: "";
@@ -98,6 +138,10 @@
         padding-left: 16px;
         padding-top: 15px;
         padding-bottom: 5px;
+        @media (min-width: $breakpoints-medium) and (max-width: 999px) {
+            gap: 6px;
+            padding-bottom: 10px;
+        }
     }
     &__data {
     }
@@ -107,6 +151,8 @@
             width: 100%;
             display: block;
         }
+        @media (min-width: $breakpoints-medium) and (max-width: 999px) {
+        }
     }
 
     &__name {
@@ -114,6 +160,9 @@
         line-height: 120%;
         color: #000000;
         margin-bottom: -6px;
+        @media (min-width: $breakpoints-medium) and (max-width: 999px) {
+            padding-bottom: 8px;
+        }
     }
 
     &__location {
@@ -152,6 +201,10 @@
         color: #767474;
         padding: 0px 15px 0px 15px;
         @media (min-width: $breakpoints-large) and (max-width: 1199px) {
+            line-height: 120%;
+        }
+        @media (min-width: $breakpoints-medium) and (max-width: 999px) {
+            font-size: 15.1px;
             line-height: 120%;
         }
     }

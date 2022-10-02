@@ -95,8 +95,10 @@
         display: flex;
         justify-content: center;
         align-items: center;
-
-        margin-bottom: 37px;
+        margin-bottom: 45px;
+        @media (min-width: $breakpoints-large) and (max-width: 1250px) {
+            margin-bottom: 37px;
+        }
     }
 
     &__number-daily-eats {

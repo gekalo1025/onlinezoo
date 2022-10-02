@@ -8,21 +8,22 @@
         justify-content: flex-end;
     }
     &__block {
+        @include adaptiv-value("padding-right", 8, 64, 1600, 1000);
+        @include adaptiv-value("margin-top", 86, 42.8, 1600, 1000);
+        @include adaptiv-value("margin-bottom", 100, 47, 1600, 1000);
         position: relative;
-        padding-top: 86px;
-        padding-bottom: 100px;
-        padding-right: 10px;
         z-index: 1;
-
         &::after {
             content: "";
             position: absolute;
-            top: 11px;
+            top: -75px;
             right: 109px;
             z-index: -1;
             background: $brand-color-gradient;
-            width: 465px;
-            height: 465px;
+            @include adaptiv-value("width", 465, 367, 1600, 1000);
+            @include adaptiv-value("height", 465, 367, 1600, 1000);
+            @include adaptiv-value("width", 367, 237.6, 1000, 640);
+            @include adaptiv-value("height", 367, 237.6, 1000, 640);
             border-radius: 50%;
         }
     }
@@ -31,15 +32,20 @@
         color: $text-color2;
         margin: 0;
         font-weight: 700;
-        @include adaptiv-value("font-size", 106.495, 60, 1);
+        @include adaptiv-value("font-size", 106.495, 85, 1600, 1000);
+        @include adaptiv-value("font-size", 85, 54.29, 1000, 640);
         line-height: 75%;
         text-align: center;
         text-transform: uppercase;
         padding-bottom: 60px;
-        padding-right: 0px;
         span {
             color: $yellow-color;
         }
+    }
+    &__form {
+        position: relative;
+        bottom: 0%;
+        right: 0%;
     }
 
     &__button {
@@ -53,17 +59,10 @@
         background-position: bottom;
         background-size: 120% auto;
         &__block {
-            padding-right: 40px;
-            padding-top: 39px;
-            padding-bottom: 49px;
-            z-index: 1;
-
             &::after {
                 z-index: -1;
-                top: -12px;
+                top: -56px;
                 right: 149px;
-                width: 365px;
-                height: 365px;
             }
         }
         &__button {
@@ -72,8 +71,33 @@
             margin: 0 0 0 43px;
         }
         &__title {
-            padding-bottom: 44px;
-            padding-right: 25px;
+            padding-bottom: 40px;
+        }
+    }
+}
+@media (min-width: $breakpoints-medium) and (max-width: 999px) {
+    .favorite-animal {
+        background-size: 121% auto;
+        background-position: -67px -4px;
+        &__block {
+            margin-top: 83px;
+            margin-bottom: 32px;
+            padding-right: 0px;
+            margin-right: -25px;
+            &::after {
+                top: -40px;
+                right: 76px;
+            }
+        }
+        .favorite-animal__form {
+            position: relative;
+            bottom: 3%;
+            right: 110%;
+        }
+        &__button {
+        }
+        &__title {
+            padding-bottom: 0px;
         }
     }
 }

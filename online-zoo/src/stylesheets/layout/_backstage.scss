@@ -2,8 +2,10 @@
     background-image: url(../assets/images/flower_foto1.png);
     background-repeat: no-repeat;
     background-position: right 0% bottom 89%;
-    padding-top: 140px;
-    padding-bottom: 161px;
+    @include adaptiv-value("padding-top", 140, 100, 1600, 1000);
+    @include adaptiv-value("padding-top", 100, 0, 1000, 640);
+    @include adaptiv-value("padding-bottom", 161, 126, 1600, 1000);
+    @include adaptiv-value("padding-bottom", 126, 63, 1000, 640);
     .layout-two-columns-backstage {
         gap: 87px;
     }
@@ -15,6 +17,9 @@
 
     &__content {
         max-width: 465px;
+        @media (min-width: $breakpoints-medium) and (max-width: 999px) {
+            max-width: 495px;
+        }
     }
 
     &__title {
@@ -30,6 +35,9 @@
     &__subtitle {
         line-height: 130%;
         padding-bottom: 54px;
+        @media (min-width: $breakpoints-medium) and (max-width: 999px) {
+            padding-bottom: 32px;
+        }
     }
 
     &__title-text {
@@ -37,6 +45,9 @@
         font-size: 24px;
         line-height: 120%;
         font-weight: normal;
+        @media (min-width: $breakpoints-medium) and (max-width: 999px) {
+            margin: 0px 0px 18px 0px;
+        }
     }
 
     &__text {
@@ -44,6 +55,7 @@
         line-height: 140%;
     }
 }
+
 @media (min-width: $breakpoints-large) and (max-width: 1499px) {
     .backstage {
         background-image: none;
@@ -65,5 +77,15 @@
         &__content {
             max-width: 454px;
         }
+    }
+}
+@media (min-width: $breakpoints-medium) and (max-width: 999px) {
+    .layout-two-columns__one-column {
+        display: none;
+    }
+    .backstage {
+        padding-top: 60px;
+        background-position: right -6% top -3%;
+        background-size: 25%;
     }
 }
