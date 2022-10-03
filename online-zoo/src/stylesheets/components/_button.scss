@@ -17,6 +17,7 @@
         background: #767474;
     }
     &:hover {
+        cursor: pointer;
         background: #e47209;
     }
     &:active {
@@ -32,6 +33,7 @@
         margin: 40% auto;
         transform: rotate(180deg);
     }
+    cursor: pointer;
     background: $brand-color-gradient;
     width: 62px;
     height: 62px;
@@ -68,6 +70,7 @@
         display: block;
         margin: 40% auto;
     }
+    cursor: pointer;
     background: $brand-color-gradient;
     width: 62px;
     height: 62px;

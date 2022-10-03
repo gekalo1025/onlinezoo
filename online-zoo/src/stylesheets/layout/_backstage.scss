@@ -6,7 +6,7 @@
     @include adaptiv-value("padding-top", 100, 0, 1000, 640);
     @include adaptiv-value("padding-bottom", 161, 126, 1600, 1000);
     @include adaptiv-value("padding-bottom", 126, 63, 1000, 640);
-    @include adaptiv-value("padding-top", 100, 104, 640, 320);
+    // @include adaptiv-value("padding-top", 100, 104, 640, 320);
 
     .layout-two-columns-backstage {
         gap: 87px;
@@ -118,6 +118,6 @@
         // padding-top: 105px;
         background-position: right -17% top 12%;
         background-size: 23%;
-        padding-bottom: 37px;
+        padding-bottom: 58px;
     }
 }

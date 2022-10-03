@@ -51,24 +51,31 @@
     }
 }
 .footer .logo {
-    @media (max-width: 320px) {
+    @media (min-width: 639px) {
+        .logo-footer-norm {
+            display: block;
+        }
+        .logo-footer-small {
+            display: none;
+        }
+    }
+    @media (max-width: 639px) {
+        .logo-footer-norm {
+            display: none;
+        }
+        .logo-footer-small {
+            display: block;
+        }
+
         border: 0;
-        background-position: center;
-        background-image: url("../assets/images/logo.svg");
-        height: 20px;
-        width: 100%;
-        background-repeat: no-repeat;
-        background-size: contain;
         a {
-            color: transparent;
             h1,
             h2 {
             }
         }
         &::after {
-            bottom: 3px;
-            left: 160px;
-            background-size: 113% auto;
+            bottom: 65%;
+            left: 56%;
         }
     }
 }

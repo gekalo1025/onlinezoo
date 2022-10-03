@@ -4,7 +4,7 @@
     @include adaptiv-value("margin-top", 100, 60, 1000, 640);
     @include adaptiv-value("margin-bottom", 140, 100, 1000, 640);
     @include adaptiv-value("margin-top", 60, 30, 640, 320);
-    @include adaptiv-value("margin-bottom", 100, 60, 640, 320);
+    @include adaptiv-value("margin-bottom", 100, 55, 640, 320);
     position: relative;
 
     &::after {
@@ -189,7 +189,7 @@
         line-height: 120%;
         color: #000000;
         margin-bottom: -6px;
-        @media (min-width: $breakpoints-medium) and (max-width: 999px) {
+        @media (min-width: $breakpoints-small) and (max-width: 999px) {
             padding-bottom: 8px;
         }
     }
