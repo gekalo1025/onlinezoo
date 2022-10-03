@@ -78,7 +78,7 @@
         }
     }
 }
-@media (min-width: $breakpoints-medium) and (max-width: 999px) {
+@media (min-width: 625px) and (max-width: 999px) {
     .favorite-animal {
         background-size: 121% auto;
         background-position: -67px -4px;
@@ -104,9 +104,10 @@
         }
     }
 }
-@media (max-width: 639px) {
+@media (max-width: 625px) {
     .favorite-animal {
-        height: 221px;
+        @include adaptiv-value("height", 300, 221, 625);
+        // height: 221px;
         background-size: 120% auto;
         background-position: bottom;
         &__block {
@@ -120,18 +121,15 @@
             }
         }
         .favorite-animal__form {
-            position: relative;
-            bottom: 3%;
-            right: 110%;
+            position: absolute;
+            // bottom: -35%;
+            left: -141%;
+            @include adaptiv-value("bottom", -100, -57, 625, 320);
         }
         &__button {
-            display: none;
-            // position: relative;
-            // right: 1%;
-            // top: 1%;
+            padding: 15px 86px 16px 91px;
         }
         &__title {
-            padding-bottom: 0px;
         }
     }
 }

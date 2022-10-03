@@ -41,7 +41,7 @@
     &__subtitle {
         line-height: 130%;
         padding-bottom: 54px;
-        @media (min-width: $breakpoints-medium) and (max-width: 999px) {
+        @media (min-width: 639px) and (max-width: 999px) {
             padding-bottom: 32px;
         }
         @media (min-width: $breakpoints-small) and (max-width: 639px) {
@@ -73,7 +73,7 @@
     }
 }
 
-@media (min-width: $breakpoints-large) and (max-width: 1499px) {
+@media (min-width: 999px) and (max-width: 1499px) {
     .backstage {
         background-image: none;
         padding-top: 100px;
@@ -96,7 +96,7 @@
         }
     }
 }
-@media (min-width: $breakpoints-medium) and (max-width: 999px) {
+@media (min-width: 639px) and (max-width: 999px) {
     .layout-two-columns__one-column {
         display: none;
     }
@@ -104,6 +104,9 @@
         padding-top: 60px;
         background-position: right -6% top -3%;
         background-size: 25%;
+        @media (min-width: 720px) and (max-width: 999px) {
+            background-size: 19%;
+        }
     }
 }
 @media (min-width: $breakpoints-small) and (max-width: 639px) {
@@ -111,8 +114,9 @@
         display: none;
     }
     .backstage {
-        padding-top: 105px;
-        background-position: right -17% top 8%;
+        @include adaptiv-value("padding-top", 130, 105, 625);
+        // padding-top: 105px;
+        background-position: right -17% top 12%;
         background-size: 23%;
         padding-bottom: 37px;
     }

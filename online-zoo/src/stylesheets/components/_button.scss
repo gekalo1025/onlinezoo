@@ -45,11 +45,17 @@
     &:active {
         background: #4b9200;
     }
-    @media (min-width: $breakpoints-large) and (max-width: 1599px) {
+    @media (min-width: 999px) and (max-width: 1599px) {
         top: 37%;
         left: 35.3%;
     }
     @media (min-width: $breakpoints-medium) and (max-width: 999px) {
+        @media (min-width: 900px) and (max-width: 999px) {
+            top: 42.5%;
+        }
+        @media (min-width: 720px) and (max-width: 900px) {
+            top: 41%;
+        }
         top: 38.5%;
         left: 38.1%;
     }
@@ -75,11 +81,17 @@
     &:active {
         background: #4b9200;
     }
-    @media (min-width: $breakpoints-large) and (max-width: 1599px) {
+    @media (min-width: 999px) and (max-width: 1599px) {
         top: 37%;
         right: 35.2%;
     }
-    @media (min-width: $breakpoints-medium) and (max-width: 999px) {
+    @media (min-width: 639px) and (max-width: 999px) {
+        @media (min-width: 900px) and (max-width: 999px) {
+            top: 42.5%;
+        }
+        @media (min-width: 720px) and (max-width: 900px) {
+            top: 41%;
+        }
         top: 38.5%;
         right: 38.1%;
     }

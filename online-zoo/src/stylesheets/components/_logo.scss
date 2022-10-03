@@ -51,7 +51,7 @@
     }
 }
 .footer .logo {
-    @media (width: 320px) {
+    @media (max-width: 320px) {
         border: 0;
         background-position: center;
         background-image: url("../assets/images/logo.svg");
@@ -60,10 +60,15 @@
         background-repeat: no-repeat;
         background-size: contain;
         a {
-            display: none;
+            color: transparent;
+            h1,
+            h2 {
+            }
         }
         &::after {
-            display: none;
+            bottom: 3px;
+            left: 160px;
+            background-size: 113% auto;
         }
     }
 }

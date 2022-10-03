@@ -54,7 +54,7 @@
         @media (min-width: $breakpoints-medium) and (max-width: 999px) {
             row-gap: 90px;
         }
-        @media (min-width: $breakpoints-large) and (max-width: 1599px) {
+        @media (min-width: 999px) and (max-width: 1599px) {
             row-gap: 93px;
         }
         form {
