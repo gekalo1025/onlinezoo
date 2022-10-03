@@ -16,6 +16,11 @@
             background-position: -282px -136px;
             height: 369px;
         }
+        @media (min-width: $breakpoints-small) and (max-width: 639px) {
+            background-size: 230% auto;
+            background-position: 32% 39%;
+            height: 221px;
+        }
     }
 }
 
