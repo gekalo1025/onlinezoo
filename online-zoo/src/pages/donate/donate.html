@@ -110,7 +110,10 @@
                   </div>
                 </div>
                 <div class="feed-friend__input-title">Amount</div>
-                <form class="feed-friend__input-container">
+                <form
+                  name="donationsAmount"
+                  class="feed-friend__input-container"
+                >
                   <div class="feed-friend__radio">
                     <label for="donations-amount-5000" class="radio-label">
                       <input
@@ -151,7 +154,6 @@
                         type="radio"
                         value="1000"
                         class="real-radio-btn"
-                        checked
                       />
                       <span class="custom-radio-btn-conteiner"
                         ><span class="custom-radio-btn-relative"
@@ -201,6 +203,7 @@
                         type="radio"
                         value="100"
                         class="real-radio-btn"
+                        checked
                       />
                       <span class="custom-radio-btn-conteiner"
                         ><span class="custom-radio-btn-relative"
@@ -250,6 +253,7 @@
                     type="number"
                     name="another-amount"
                     placeholder="Another amount"
+                    value="100"
                     id="another-amount"
                     min="1"
                     max="9999"
