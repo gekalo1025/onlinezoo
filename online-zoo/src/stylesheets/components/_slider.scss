@@ -16,15 +16,12 @@
 .slider__range::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 115px;
+    width: 12.5%;
     height: 6px;
     border-radius: 5px;
     background: #fe9013;
     cursor: pointer;
     &:hover {
         background: #e47209;
-    }
-    @media (min-width: $breakpoints-large) and (max-width: 1199px) {
-        width: 75px;
     }
 }
