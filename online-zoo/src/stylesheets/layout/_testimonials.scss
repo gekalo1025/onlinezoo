@@ -71,7 +71,7 @@
             flex-direction: column;
             gap: 15px;
             overflow: auto;
-            max-height: 300px;
+            max-height: 350px;
         }
         @media (max-width: 639px) {
             margin-bottom: 30px;
@@ -104,8 +104,9 @@
 .testimonials-card {
     position: relative;
     background: #f1f3f2;
-    position: relative;
     border-radius: 20px;
+    top: 0;
+    left: 0;
     // width: 268px;
     flex: 0 0 17.2%;
     height: 391px;
@@ -125,7 +126,7 @@
     @media (min-width: $breakpoints-small) and (max-width: 999px) {
         width: 100%;
         max-height: 109px;
-        overflow: auto;
+        // overflow: auto;
 
         font-size: 15px;
         line-height: 120%;
@@ -146,12 +147,26 @@
         }
         &.popup-active {
             position: absolute;
-            top: 0;
+            top: 5%;
             left: 50%;
+            z-index: 7;
+            // overflow: hidden;
             transform: translateX(-50%);
-            z-index: 6;
             max-width: 267px;
-            height: 391px;
+            max-height: 391px;
+            box-shadow: 7px 3px 0px 20px rgba(245, 247, 246, 1);
+            transition: left 0.7s ease 0s;
+            &::after {
+                content: "";
+                cursor: pointer;
+                background-image: url(../assets/icons/x_icon.svg);
+                background-size: contain;
+                position: absolute;
+                width: 15px;
+                height: 15px;
+                top: 4%;
+                right: 7%;
+            }
         }
     }
     &::before {

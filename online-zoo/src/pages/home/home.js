@@ -1,11 +1,29 @@
 import "../../stylesheets/main.scss";
 import "../home/burger";
-
+//popup testemodials
 const blackout = document.querySelector(".blackout");
 const testimonialCard = document.querySelector(".testimonials-card");
-testimonialCard.addEventListener("click", () => {
-  blackout.style.display = "block";
-  testimonialCard.classList.toggle("popup-active");
+
+document.body.addEventListener("click", (el) => {
+  const mediaQuery1000 = window.matchMedia("(max-width: 999px)");
+  if (mediaQuery1000.matches) {
+    if (
+      el.target.classList.contains("testimonials-card") &&
+      el.target.classList.contains("popup-active")
+    ) {
+      el.target.classList.remove("popup-active");
+      blackout.style.visibility = "hidden";
+      blackout.style.zIndex = "0";
+    } else if (el.target.classList.contains("testimonials-card")) {
+      blackout.style.visibility = "visible";
+      blackout.style.zIndex = "5";
+      el.target.classList.toggle("popup-active");
+    } else {
+      blackout.style.visibility = "hidden";
+      blackout.style.zIndex = "0";
+    }
+  } else {
+  }
 });
 
 /////pets carousel ////
