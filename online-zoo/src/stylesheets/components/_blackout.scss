@@ -1,5 +1,6 @@
 .blackout {
-    display: none;
+    // display: none;
+    visibility: hidden;
     background-color: #000;
     height: 100%;
     left: 0;
@@ -8,4 +9,5 @@
     top: 0;
     width: 100%;
     z-index: 5;
+    transition: visibility 0.2s;
 }

@@ -137,6 +137,15 @@
                 padding: 8px;
             }
         }
+        &.popup-active {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 6;
+            max-width: 267px;
+            height: 391px;
+        }
     }
     &::before {
         content: "";
