@@ -10,11 +10,11 @@ burgerMenu.addEventListener("click", () => {
 
 document.body.addEventListener("click", (el) => {
   if (el.target.classList.contains("header__icon-close")) {
-    menu.classList.toggle("burger-active");
+    menu.classList.remove("burger-active");
   }
   if (menu.classList.contains("burger-active")) {
-    blackout.style.visibility = "visible";
     blackout.style.zIndex = "5";
+    blackout.style.visibility = "visible";
   } else {
     blackout.style.visibility = "hidden";
     blackout.style.zIndex = "0";

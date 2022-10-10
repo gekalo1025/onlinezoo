@@ -146,8 +146,8 @@
             }
         }
         &.popup-active {
-            position: absolute;
-            top: 5%;
+            position: fixed;
+            top: 15%;
             left: 50%;
             z-index: 7;
             // overflow: hidden;

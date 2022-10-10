@@ -19,8 +19,8 @@ document.body.addEventListener("click", (el) => {
       blackout.style.zIndex = "5";
       el.target.classList.toggle("popup-active");
     } else {
-      blackout.style.visibility = "hidden";
-      blackout.style.zIndex = "0";
+      // blackout.style.visibility = "hidden";
+      // blackout.style.zIndex = "0";
     }
   } else {
   }
