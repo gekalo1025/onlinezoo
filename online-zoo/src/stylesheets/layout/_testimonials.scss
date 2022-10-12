@@ -55,14 +55,23 @@
             padding-bottom: 18px;
         }
     }
+    &__slider-wrapper {
+        overflow: hidden;
+        max-width: 100%;
+    }
 
     &__slider {
-        display: flex;
+        display: inline-flex;
+        flex-wrap: nowrap;
         gap: 30px;
         margin-bottom: 15px;
-        @media (min-width: $breakpoints-small) and (max-width: 700px) {
+        position: relative;
+
+        @media (min-width: $breakpoints-small) and (max-width: 999px) {
             flex-direction: column;
             gap: 15px;
+            overflow: auto;
+            max-height: 350px;
         }
         @media (max-width: 639px) {
             margin-bottom: 30px;
@@ -95,31 +104,30 @@
 .testimonials-card {
     position: relative;
     background: #f1f3f2;
-    position: relative;
     border-radius: 20px;
-    width: 268px;
+    top: 0;
+    left: 0;
+    // width: 268px;
+    flex: 0 0 17.2%;
     height: 391px;
     overflow: hidden;
     font-size: 16px;
     line-height: 180%;
-    &:nth-child(3) {
-        display: none;
+    // &:nth-child(3) {
+    //     display: none;
+    // }
+    @media (min-width: 1199px) and (max-width: 1250px) {
+        flex: 0 0 13.6%;
     }
     @media (min-width: $breakpoints-medium) and (max-width: 1199px) {
-        &:nth-last-child(1) {
-            display: none;
-        }
-        &:nth-child(2) {
-            display: none;
-        }
-        &:nth-child(3) {
-            display: block;
-        }
-        width: 293px;
+        flex: 0 0 19%;
     }
-    @media (min-width: $breakpoints-small) and (max-width: 700px) {
+
+    @media (min-width: $breakpoints-small) and (max-width: 999px) {
         width: 100%;
-        height: 109px;
+        max-height: 109px;
+        // overflow: auto;
+
         font-size: 15px;
         line-height: 120%;
         &:last-child {
@@ -135,6 +143,29 @@
 
             @media (width: 320px) {
                 padding: 8px;
+            }
+        }
+        &.popup-active {
+            position: fixed;
+            top: 15%;
+            left: 50%;
+            z-index: 7;
+            // overflow: hidden;
+            transform: translateX(-50%);
+            max-width: 267px;
+            max-height: 391px;
+            box-shadow: 7px 3px 0px 20px rgba(245, 247, 246, 1);
+            transition: left 0.7s ease 0s;
+            &::after {
+                content: "";
+                cursor: pointer;
+                background-image: url(../assets/icons/x_icon.svg);
+                background-size: contain;
+                position: absolute;
+                width: 15px;
+                height: 15px;
+                top: 4%;
+                right: 7%;
             }
         }
     }

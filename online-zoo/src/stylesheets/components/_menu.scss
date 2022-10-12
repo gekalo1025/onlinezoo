@@ -25,5 +25,79 @@
             background-image: $brand-color-gradient;
             -webkit-background-clip: text;
         }
+        @media (min-width: $breakpoints-small) and (max-width: 810px) {
+            color: $text-color;
+            font-weight: 400;
+        }
+    }
+}
+
+.header .menu-nav {
+    .menu-nav__item-logo,
+    .header__icon-close {
+        display: none;
+    }
+    @media (min-width: $breakpoints-small) and (max-width: 810px) {
+        &.burger-active {
+            transition: top 0.5s;
+            top: 0;
+        }
+        align-items: flex-start;
+        gap: 15px;
+        padding-top: 8px;
+        padding-left: 10px;
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+        background: #ffffff;
+        left: 0;
+        transition: top 0.5s;
+        top: -999px;
+
+        li:last-child {
+            padding-bottom: 38px;
+        }
+        .header__icon-close {
+            display: block;
+            position: absolute;
+            top: 7%;
+            right: 4%;
+        }
+
+        & .menu-nav__item-logo {
+            display: block;
+            margin-bottom: 13px;
+            .logo {
+                @media (min-width: 320px) and (max-width: 810px) {
+                    height: 36px;
+                    padding-bottom: 36px;
+                }
+                height: 36px;
+                padding: 3.5px;
+                border: 0.950725px solid #fe9013;
+                a {
+                    color: $brand-color;
+                    h1,
+                    h2 {
+                        font-weight: 400;
+                        font-size: 15.2116px;
+                        line-height: 120%;
+                        text-align: center;
+                    }
+                }
+                &::after {
+                    @media (min-width: 320px) and (max-width: 810px) {
+                        bottom: 0px;
+                        left: 11px;
+                    }
+                    background-size: 66% auto;
+                    bottom: -5px;
+                    left: 7px;
+                    -webkit-filter: invert(54%) sepia(94%) saturate(842%) hue-rotate(350deg) brightness(101%)
+                        contrast(99%);
+                    filter: invert(54%) sepia(94%) saturate(842%) hue-rotate(350deg) brightness(101%) contrast(99%);
+                }
+            }
+        }
     }
 }

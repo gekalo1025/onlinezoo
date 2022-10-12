@@ -9,6 +9,7 @@
   </head>
   <body>
     <div class="wrapper">
+      <div class="blackout"></div>
       <header class="header">
         <div class="container header__container">
           <div class="logo">
@@ -19,9 +20,19 @@
               </h1></a
             >
           </div>
-          <div class="header__burger-menu"></div>
+
           <div class="header__menu menu">
             <nav class="menu-nav">
+              <li class="menu-nav__item menu-nav__item-logo">
+                <div class="logo">
+                  <a href="/home.html"
+                    ><h1>
+                      PetStory <br />
+                      online
+                    </h1></a
+                  >
+                </div>
+              </li>
               <li class="menu-nav__item">
                 <a href="/home.html" class="menu-nav__link">About</a>
               </li>
@@ -34,6 +45,11 @@
               <li class="menu-nav__item">
                 <a href="/donate.html" class="menu-nav__link active">Donate</a>
               </li>
+              <img
+                class="header__icon-close"
+                src="../../assets/icons/x_icon.svg"
+                alt="close"
+              />
               <li class="menu-nav__item">
                 <a href="#" class="menu-nav__link">Contact us</a>
               </li>
@@ -48,6 +64,7 @@
               </li>
             </nav>
           </div>
+          <div class="header__burger-menu"></div>
         </div>
       </header>
       <main class="donate-page">
@@ -93,7 +110,10 @@
                   </div>
                 </div>
                 <div class="feed-friend__input-title">Amount</div>
-                <form class="feed-friend__input-container">
+                <form
+                  name="donationsAmount"
+                  class="feed-friend__input-container"
+                >
                   <div class="feed-friend__radio">
                     <label for="donations-amount-5000" class="radio-label">
                       <input
@@ -134,7 +154,6 @@
                         type="radio"
                         value="1000"
                         class="real-radio-btn"
-                        checked
                       />
                       <span class="custom-radio-btn-conteiner"
                         ><span class="custom-radio-btn-relative"
@@ -184,6 +203,7 @@
                         type="radio"
                         value="100"
                         class="real-radio-btn"
+                        checked
                       />
                       <span class="custom-radio-btn-conteiner"
                         ><span class="custom-radio-btn-relative"
@@ -233,6 +253,7 @@
                     type="number"
                     name="another-amount"
                     placeholder="Another amount"
+                    value="100"
                     id="another-amount"
                     min="1"
                     max="9999"

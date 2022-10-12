@@ -42,10 +42,14 @@
     top: 39.5%;
     left: 8.6%;
     transform: translate(0%, -50%);
+    z-index: 4;
     border: none;
     // transition: background-color 0.4s;
     &:active {
         background: #4b9200;
+    }
+    &:disabled {
+        background: #a1a1a1;
     }
     @media (min-width: 999px) and (max-width: 1599px) {
         top: 37%;
@@ -65,7 +69,7 @@
         display: none;
     }
 }
-.button-arrow-rigth {
+.button-arrow-right {
     img {
         display: block;
         margin: 40% auto;
@@ -80,10 +84,15 @@
     right: 8.8%;
     transform: translate(0%, -50%);
     border: none;
+    z-index: 4;
     // transition: background-color 0.4s;
     &:active {
         background: #4b9200;
     }
+    &:disabled {
+        background: #a1a1a1;
+    }
+
     @media (min-width: 999px) and (max-width: 1599px) {
         top: 37%;
         right: 35.2%;

@@ -1,5 +1,27 @@
 .pets {
     position: relative;
+    .container {
+        overflow: hidden;
+    }
+    .carousel {
+        position: relative;
+        left: -1180px;
+        gap: 20px;
+        display: flex;
+        flex-wrap: nowrap;
+        @media (min-width: $breakpoints-large) and (max-width: 1250px) {
+            left: -104%;
+            gap: 40px;
+        }
+        @media (min-width: $breakpoints-medium) and (max-width: $breakpoints-large) {
+            left: -105%;
+            gap: 40px;
+        }
+        @media (max-width: 639px) {
+            left: 0;
+        }
+    }
+
     &::after {
         content: "";
         position: absolute;
@@ -47,12 +69,17 @@
     }
 
     &__cards-row {
+        flex: 0 0 100%;
         display: flex;
         row-gap: 20px;
         column-gap: 30px;
         flex-wrap: wrap;
         @media (min-width: $breakpoints-medium) and (max-width: 999px) {
             row-gap: 90px;
+            // flex-wrap: nowrap;
+            // &:nth-last-child(-n + 2) {
+            //     display: none;
+            // }
         }
         @media (min-width: 999px) and (max-width: 1599px) {
             row-gap: 93px;
@@ -64,66 +91,26 @@
                 margin-top: -31px;
             }
         }
-        .pet-card_one {
-            order: 1;
-        }
-        .pet-card_two {
-            order: 2;
-        }
-        .pet-card_three {
-            order: 3;
-            @media (max-width: $breakpoints-large) {
-                order: 5;
-            }
-        }
-        .pet-card_four {
-            order: 4;
-            @media (max-width: $breakpoints-large) {
-                display: none;
-            }
-        }
-        .pet-card_five {
-            order: 5;
-            @media (max-width: $breakpoints-large) {
-                order: 3;
-            }
-            @media (min-width: $breakpoints-small) and (max-width: 999px) {
-                display: none;
-            }
-        }
-        .pet-card_six {
-            order: 6;
-            @media (min-width: $breakpoints-small) and (max-width: 999px) {
-                display: none;
-            }
-        }
-        .pets__form-button {
-            order: 20;
-        }
-        .pet-card_seven {
-            display: none;
-            @media (max-width: $breakpoints-large) {
-                display: block;
-                order: 5;
-            }
-        }
+    }
+    &__cards-row-active {
     }
 
     &__button {
         position: relative;
         z-index: 2;
-        margin: 60px auto 100px auto;
+        margin: 60px auto 100px 40%;
+
         padding: 16px 57px 16px 60px;
         background: #fe9013;
-        @media (max-width: $breakpoints-large) {
-            margin: -10px auto 140px auto;
+        @media (min-width: $breakpoints-large) {
+            margin: 80px auto 140px 36%;
         }
         @media (min-width: $breakpoints-medium) and (max-width: 999px) {
-            margin: 0 auto 99px auto;
+            margin: 60px auto 99px 30%;
         }
         @media (max-width: 639px) {
             padding: 14px 56px 16px 60px;
-            margin: 0px auto 61px auto;
+            margin: 20px auto 61px 24%;
         }
     }
 }
@@ -133,6 +120,7 @@
     border: 1px solid #fe9013;
     border-radius: 5px;
     width: calc((100% - 60px) / 3);
+
     @media (min-width: $breakpoints-medium) and (max-width: 999px) {
         width: calc((100% - 30px) / 2);
     }

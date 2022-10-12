@@ -12,9 +12,7 @@
     @media (min-width: $breakpoints-small) and (max-width: 810px) {
         padding: 2.5px 0;
         position: fixed;
-        z-index: 5;
-        // top: 0;
-        // left: 0;
+        z-index: 7;
         width: 100%;
     }
 
@@ -26,6 +24,18 @@
             justify-content: space-between;
         }
     }
+
+    &__menu {
+        padding-left: 63px;
+        white-space: nowrap;
+        li:nth-last-child(1) {
+            @include adaptiv-value("padding-left", 380, 211, 1600, 1000);
+            @include adaptiv-value("padding-left", 150, 1, 999, 810);
+            @media (min-width: $breakpoints-small) and (max-width: 810px) {
+                padding-left: 0;
+            }
+        }
+    }
     &__burger-menu {
         display: none;
         background-image: url(../assets/icons/burger_menu.svg);
@@ -33,17 +43,6 @@
         height: 10px;
         @media (min-width: $breakpoints-small) and (max-width: 810px) {
             display: block;
-        }
-    }
-    &__menu {
-        padding-left: 63px;
-        white-space: nowrap;
-        li:nth-last-child(1) {
-            @include adaptiv-value("padding-left", 380, 211, 1600, 1000);
-            @include adaptiv-value("padding-left", 150, 1, 999, 810);
-        }
-        @media (min-width: $breakpoints-small) and (max-width: 810px) {
-            display: none;
         }
     }
 }

@@ -6,14 +6,14 @@
 @import "vendors/normalize";
 
 // 3. Base stuff
-@import "base/base", "base/fonts", "base/typography", "base/helpers";
+@import "base/base", "base/fonts", "base/typography", "base/helpers", "base/animations";
 
 // 4. Layout-related sections
 @import "layout/header", "layout/footer", "layout/favorite-animal", "layout/backstage", "layout/pets",
     "layout/pick-friend", "layout/testimonials";
 
 // 5. Components
-@import "components/button", "components/slider", "components/logo", "components/menu";
+@import "components/button", "components/slider", "components/logo", "components/menu", "components/blackout";
 
 // 6. Page-specific styles
 // @import "pages/donate";

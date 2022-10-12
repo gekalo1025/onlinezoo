@@ -237,7 +237,16 @@
             height: 2px;
             background-color: #72828e;
             @media (min-width: $breakpoints-small) and (max-width: 639px) {
-                width: 90%;
+                width: 95%;
+            }
+            @media (min-width: 640px) and (max-width: 825px) {
+                width: 88%;
+            }
+            @media (min-width: 825px) and (max-width: 999px) {
+                width: 91%;
+            }
+            @media (min-width: $breakpoints-large) and (max-width: 1250px) {
+                width: 96%;
             }
         }
         @media (min-width: $breakpoints-large) and (max-width: 1250px) {
