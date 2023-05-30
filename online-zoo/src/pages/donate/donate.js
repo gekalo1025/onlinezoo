@@ -1,7 +1,6 @@
-import "../../stylesheets/pages/_donate.scss";
 import "../../stylesheets/main.scss";
-import "../home/burger";
-import { check } from "prettier";
+import "../../stylesheets/pages/_donate.scss";
+import "../../js/burgerMenu";
 
 let form = document.forms.donationsAmount;
 let amountInput = document.querySelector(".another-amount__input");

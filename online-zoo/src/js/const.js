@@ -1,0 +1,17 @@
+export const blackout = document.querySelector(".blackout");
+export const btnLeft = document.querySelector(".button-arrow-left");
+export const btnRight = document.querySelector(".button-arrow-right");
+export const carousel = document.querySelector(".carousel");
+export const petsCardLeft = document.querySelector(".pets__cards-row-left");
+export const petsCardActive = document.querySelector(".pets__cards-row-active");
+export const petsCardRight = document.querySelector(".pets__cards-row-right");
+export const mediaQuery = window.matchMedia("(max-width: 998px)");
+export const testimonialsSlider = document.querySelector(".testimonials__slider");
+export const mediaQuery1250 = window.matchMedia("(min-width: 1250px)");
+export const mediaQuery1199 = window.matchMedia("(min-width: 1199px)");
+export const mediaQuery1000 = window.matchMedia("(min-width: 1000px)");
+export const sliderRange = document.querySelector(".slider__range");
+export const burgerMenu = document.querySelector(".header__burger-menu");
+export const menu = document.querySelector(".menu-nav");
+export const testimonialCard = document.querySelector(".testimonials-card");
+export const testimonialCardAll = document.querySelectorAll(".testimonials-card");
