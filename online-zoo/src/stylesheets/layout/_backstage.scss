@@ -1,0 +1,123 @@
+.backstage {
+    background-image: url(../assets/images/flower_foto1.png);
+    background-repeat: no-repeat;
+    background-position: right 0% bottom 89%;
+    @include adaptiv-value("padding-top", 140, 100, 1600, 1000);
+    @include adaptiv-value("padding-top", 100, 0, 1000, 640);
+    @include adaptiv-value("padding-bottom", 161, 126, 1600, 1000);
+    @include adaptiv-value("padding-bottom", 126, 63, 1000, 640);
+    // @include adaptiv-value("padding-top", 100, 104, 640, 320);
+
+    .layout-two-columns-backstage {
+        gap: 87px;
+    }
+    &__image {
+        img {
+            width: 100%;
+        }
+    }
+
+    &__content {
+        max-width: 465px;
+        @media (min-width: $breakpoints-medium) and (max-width: 999px) {
+            max-width: 495px;
+        }
+    }
+
+    &__title {
+        h2 {
+            margin: 0;
+            font-weight: 400;
+            font-size: 48px;
+            @include adaptiv-value("font-size", 48, 24, 640, 320);
+            line-height: 120%;
+        }
+        padding-bottom: 20px;
+        @media (min-width: $breakpoints-small) and (max-width: 639px) {
+            padding-bottom: 9px;
+        }
+    }
+
+    &__subtitle {
+        line-height: 130%;
+        padding-bottom: 54px;
+        @media (min-width: 639px) and (max-width: 999px) {
+            padding-bottom: 32px;
+        }
+        @media (min-width: $breakpoints-small) and (max-width: 639px) {
+            padding-bottom: 22px;
+        }
+    }
+
+    &__title-text {
+        margin: 0px 0px 33px 0px;
+        font-size: 24px;
+        line-height: 120%;
+        font-weight: normal;
+        @media (min-width: $breakpoints-medium) and (max-width: 999px) {
+            margin: 0px 0px 18px 0px;
+        }
+        @media (min-width: $breakpoints-small) and (max-width: 639px) {
+            margin: 0px 0px 8px 0px;
+        }
+    }
+
+    &__text {
+        font-size: 16px;
+        line-height: 140%;
+        @media (min-width: $breakpoints-small) and (max-width: 639px) {
+            p {
+                margin: 0;
+            }
+        }
+    }
+}
+
+@media (min-width: 999px) and (max-width: 1499px) {
+    .backstage {
+        background-image: none;
+        padding-top: 100px;
+        padding-bottom: 126px;
+        .layout-two-columns-backstage {
+            gap: 31px;
+            & > div {
+                flex: 1 1 calc(50% - 31px);
+            }
+        }
+        &__image {
+            img {
+                padding: 10px 0;
+                max-width: 100%;
+            }
+        }
+
+        &__content {
+            max-width: 454px;
+        }
+    }
+}
+@media (min-width: 639px) and (max-width: 999px) {
+    .layout-two-columns__one-column {
+        display: none;
+    }
+    .backstage {
+        padding-top: 60px;
+        background-position: right -6% top -3%;
+        background-size: 25%;
+        @media (min-width: 720px) and (max-width: 999px) {
+            background-size: 19%;
+        }
+    }
+}
+@media (min-width: $breakpoints-small) and (max-width: 639px) {
+    .layout-two-columns__one-column {
+        display: none;
+    }
+    .backstage {
+        @include adaptiv-value("padding-top", 130, 105, 625);
+        // padding-top: 105px;
+        background-position: right -17% top 12%;
+        background-size: 23%;
+        padding-bottom: 58px;
+    }
+}

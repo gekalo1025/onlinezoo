@@ -1,0 +1,113 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+.button {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    background: $brand-color-gradient;
+    transition: all 0.4s;
+    border: none;
+    &:disabled {
+        background: #767474;
+    }
+    &:hover {
+        cursor: pointer;
+        background: #e47209;
+    }
+    &:active {
+        background: #4b9200;
+    }
+}
+.button_oval {
+    border-radius: 25px;
+}
+.button-arrow-left {
+    img {
+        display: block;
+        margin: 40% auto;
+        transform: rotate(180deg);
+    }
+    cursor: pointer;
+    background: $brand-color-gradient;
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    position: absolute;
+    top: 39.5%;
+    left: 8.6%;
+    transform: translate(0%, -50%);
+    z-index: 4;
+    border: none;
+    // transition: background-color 0.4s;
+    &:active {
+        background: #4b9200;
+    }
+    &:disabled {
+        background: #a1a1a1;
+    }
+    @media (min-width: 999px) and (max-width: 1599px) {
+        top: 37%;
+        left: 35.3%;
+    }
+    @media (min-width: $breakpoints-medium) and (max-width: 999px) {
+        @media (min-width: 900px) and (max-width: 999px) {
+            top: 42.5%;
+        }
+        @media (min-width: 720px) and (max-width: 900px) {
+            top: 41%;
+        }
+        top: 38.5%;
+        left: 38.1%;
+    }
+    @media (max-width: 639px) {
+        display: none;
+    }
+}
+.button-arrow-right {
+    img {
+        display: block;
+        margin: 40% auto;
+    }
+    cursor: pointer;
+    background: $brand-color-gradient;
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    position: absolute;
+    top: 39.4%;
+    right: 8.8%;
+    transform: translate(0%, -50%);
+    border: none;
+    z-index: 4;
+    // transition: background-color 0.4s;
+    &:active {
+        background: #4b9200;
+    }
+    &:disabled {
+        background: #a1a1a1;
+    }
+
+    @media (min-width: 999px) and (max-width: 1599px) {
+        top: 37%;
+        right: 35.2%;
+    }
+    @media (min-width: 639px) and (max-width: 999px) {
+        @media (min-width: 900px) and (max-width: 999px) {
+            top: 42.5%;
+        }
+        @media (min-width: 720px) and (max-width: 900px) {
+            top: 41%;
+        }
+        top: 38.5%;
+        right: 38.1%;
+    }
+    @media (max-width: 639px) {
+        display: none;
+    }
+}

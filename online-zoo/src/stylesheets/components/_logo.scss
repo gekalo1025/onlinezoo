@@ -1,0 +1,81 @@
+.logo {
+    position: relative;
+    padding: 3.5px;
+    height: 54.6px;
+    border: 1.18841px solid #ffffff;
+    a {
+        color: $text-color2;
+        h1,
+        h2 {
+            margin: 0;
+            padding: 0;
+            line-height: 120%;
+            text-align: center;
+            font-weight: 400;
+            font-size: 19.0145px;
+        }
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 10px;
+        left: 11px;
+        background-image: url("../assets/icons/bamboo.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 10px;
+        height: 20px;
+        color: $text-color2;
+    }
+}
+.header .logo {
+    a {
+        h1,
+        h2 {
+            @media (max-width: $breakpoints-medium) {
+                font-size: 12.28px;
+            }
+        }
+    }
+    &::after {
+        @media (max-width: $breakpoints-medium) {
+            bottom: -4px;
+            left: 4px;
+            background-size: 66% auto;
+        }
+    }
+    @media (max-width: $breakpoints-medium) {
+        padding: 0px 0px 0px 0px;
+        height: 29.45px;
+        border: 0;
+    }
+}
+.footer .logo {
+    @media (min-width: 639px) {
+        .logo-footer-norm {
+            display: block;
+        }
+        .logo-footer-small {
+            display: none;
+        }
+    }
+    @media (max-width: 639px) {
+        .logo-footer-norm {
+            display: none;
+        }
+        .logo-footer-small {
+            display: block;
+        }
+
+        border: 0;
+        a {
+            h1,
+            h2 {
+            }
+        }
+        &::after {
+            bottom: 65%;
+            left: 56%;
+        }
+    }
+}

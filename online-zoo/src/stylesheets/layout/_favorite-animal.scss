@@ -1,0 +1,135 @@
+.favorite-animal {
+    background-image: url("../assets/images/Giant\ Panda.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    .container {
+        display: flex;
+        justify-content: flex-end;
+    }
+    &__block {
+        @include adaptiv-value("padding-right", 8, 64, 1600, 1000);
+        @include adaptiv-value("margin-top", 86, 42.8, 1600, 1000);
+        @include adaptiv-value("margin-bottom", 100, 47, 1600, 1000);
+        position: relative;
+        z-index: 1;
+        &::after {
+            content: "";
+            position: absolute;
+            top: -75px;
+            right: 109px;
+            z-index: -1;
+            background: $brand-color-gradient;
+            @include adaptiv-value("width", 465, 367, 1600, 1000);
+            @include adaptiv-value("height", 465, 367, 1600, 1000);
+            @include adaptiv-value("width", 367, 237.6, 1000, 640);
+            @include adaptiv-value("height", 367, 237.6, 1000, 640);
+            @include adaptiv-value("width", 237.6, 119, 640, 320);
+            @include adaptiv-value("height", 237.6, 119, 640, 320);
+            border-radius: 50%;
+        }
+    }
+
+    &__title {
+        color: $text-color2;
+        margin: 0;
+        font-weight: 700;
+        @include adaptiv-value("font-size", 106.495, 85, 1600, 1000);
+        @include adaptiv-value("font-size", 85, 54.29, 1000, 640);
+        @include adaptiv-value("font-size", 54.29, 27.21, 640, 320);
+        line-height: 75%;
+        text-align: center;
+        text-transform: uppercase;
+        padding-bottom: 60px;
+        span {
+            color: $yellow-color;
+        }
+    }
+    &__form {
+        position: relative;
+        bottom: 0%;
+        right: 0%;
+    }
+
+    &__button {
+        padding: 16px 92px;
+        display: block;
+        margin: 0 auto;
+    }
+}
+@media (min-width: $breakpoints-large) and (max-width: 1300px) {
+    .favorite-animal {
+        background-position: bottom;
+        background-size: 120% auto;
+        &__block {
+            &::after {
+                z-index: -1;
+                top: -56px;
+                right: 149px;
+            }
+        }
+        &__button {
+            padding: 16px 92px;
+            display: block;
+            margin: 0 0 0 43px;
+        }
+        &__title {
+            padding-bottom: 40px;
+        }
+    }
+}
+@media (min-width: 625px) and (max-width: 999px) {
+    .favorite-animal {
+        background-size: 121% auto;
+        background-position: -67px -4px;
+        &__block {
+            margin-top: 83px;
+            margin-bottom: 32px;
+            padding-right: 0px;
+            margin-right: -25px;
+            &::after {
+                top: -40px;
+                right: 76px;
+            }
+        }
+        .favorite-animal__form {
+            position: relative;
+            bottom: 3%;
+            right: 110%;
+        }
+        &__button {
+        }
+        &__title {
+            padding-bottom: 0px;
+        }
+    }
+}
+@media (max-width: 625px) {
+    .favorite-animal {
+        @include adaptiv-value("height", 300, 221, 625);
+        // height: 221px;
+        background-size: 120% auto;
+        background-position: bottom;
+        &__block {
+            margin-top: 76px;
+            margin-bottom: 32px;
+            padding-right: 0px;
+            margin-right: 3px;
+            &::after {
+                top: -20px;
+                right: 26px;
+            }
+        }
+        .favorite-animal__form {
+            position: absolute;
+            // bottom: -35%;
+            left: -141%;
+            @include adaptiv-value("bottom", -100, -57, 625, 320);
+        }
+        &__button {
+            padding: 15px 86px 16px 91px;
+        }
+        &__title {
+        }
+    }
+}

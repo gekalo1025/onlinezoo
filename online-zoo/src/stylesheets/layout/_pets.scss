@@ -1,0 +1,220 @@
+.pets {
+    position: relative;
+    .container {
+        overflow: hidden;
+    }
+    .carousel {
+        position: relative;
+        left: -1180px;
+        gap: 20px;
+        display: flex;
+        flex-wrap: nowrap;
+        @media (min-width: $breakpoints-large) and (max-width: 1250px) {
+            left: -104%;
+            gap: 40px;
+        }
+        @media (min-width: $breakpoints-medium) and (max-width: $breakpoints-large) {
+            left: -105%;
+            gap: 40px;
+        }
+        @media (max-width: 639px) {
+            left: 0;
+        }
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 450px;
+        bottom: 0%;
+        left: -9%;
+        background-image: url("../assets/images/palm_foto.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        @media (min-width: $breakpoints-large) and (max-width: 1599px) {
+            height: 203px;
+            left: 0%;
+        }
+        @media (min-width: $breakpoints-medium) and (max-width: 999px) {
+            height: 199px;
+        }
+        @media (min-width: $breakpoints-small) and (max-width: 639px) {
+            height: 73px;
+            left: -4%;
+        }
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 280px;
+        bottom: 0%;
+        left: 76.5%;
+        background-image: url("../assets/images/strelitzia.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        @media (min-width: $breakpoints-large) and (max-width: 1599px) {
+            height: 184px;
+            left: 75.5%;
+        }
+        @media (min-width: $breakpoints-medium) and (max-width: 999px) {
+            height: 130px;
+            left: 72.5%;
+        }
+        @media (min-width: $breakpoints-small) and (max-width: 639px) {
+            height: 66px;
+            left: 78%;
+        }
+    }
+
+    &__cards-row {
+        flex: 0 0 100%;
+        display: flex;
+        row-gap: 20px;
+        column-gap: 30px;
+        flex-wrap: wrap;
+        @media (min-width: $breakpoints-medium) and (max-width: 999px) {
+            row-gap: 90px;
+            // flex-wrap: nowrap;
+            // &:nth-last-child(-n + 2) {
+            //     display: none;
+            // }
+        }
+        @media (min-width: 999px) and (max-width: 1599px) {
+            row-gap: 93px;
+        }
+        form {
+            display: block;
+            margin: 0 auto;
+            @media (min-width: $breakpoints-medium) and (max-width: 999px) {
+                margin-top: -31px;
+            }
+        }
+    }
+    &__cards-row-active {
+    }
+
+    &__button {
+        position: relative;
+        z-index: 2;
+        margin: 60px auto 100px 40%;
+
+        padding: 16px 57px 16px 60px;
+        background: #fe9013;
+        @media (min-width: $breakpoints-large) {
+            margin: 80px auto 140px 36%;
+        }
+        @media (min-width: $breakpoints-medium) and (max-width: 999px) {
+            margin: 60px auto 99px 30%;
+        }
+        @media (max-width: 639px) {
+            padding: 14px 56px 16px 60px;
+            margin: 20px auto 61px 24%;
+        }
+    }
+}
+
+.pet-card {
+    position: relative;
+    border: 1px solid #fe9013;
+    border-radius: 5px;
+    width: calc((100% - 60px) / 3);
+
+    @media (min-width: $breakpoints-medium) and (max-width: 999px) {
+        width: calc((100% - 30px) / 2);
+    }
+    @media (min-width: $breakpoints-small) and (max-width: 639px) {
+        width: 100%;
+        margin: 0 7px;
+    }
+
+    &:hover {
+        cursor: pointer;
+        .pet-card__image img {
+            transform: scale(1.2);
+        }
+        .pet-card__popup {
+            transition: top 1s, opacity 2s;
+            @include adaptiv-value("top", 50, 10, 1600, 640);
+            visibility: visible;
+            opacity: 1;
+        }
+        .pet-card__image {
+            transition: background-color 0.5s;
+            background-color: rgba(0, 0, 0, 0.262);
+            img {
+                position: relative;
+                z-index: -1;
+            }
+        }
+    }
+    &__image {
+        width: 100%;
+        display: inline-block;
+        overflow: hidden;
+        text-align: center;
+        img {
+            transition: transform 1s;
+            width: 100%;
+        }
+    }
+
+    &__description {
+        margin-top: -1px;
+        padding: 0px 14px 10px 16px;
+        display: flex;
+        justify-content: space-between;
+        @media (min-width: $breakpoints-medium) and (max-width: 999px) {
+            padding: 0 7px 0 11px;
+        }
+        @media (min-width: $breakpoints-small) and (max-width: 639px) {
+            padding: 0px 15px 8px 11px;
+        }
+    }
+    &__text {
+        // visibility: hidden;
+        // opacity: 0;
+    }
+
+    &__name {
+        margin: 0;
+        font-weight: 500;
+        line-height: 140%;
+        text-transform: uppercase;
+        color: #000000;
+        @include adaptiv-value(" font-size", 16, 12.4695, 1000, 640);
+        @media (min-width: $breakpoints-small) and (max-width: 639px) {
+            font-size: 12.47px;
+        }
+    }
+
+    &__location {
+        margin: 0;
+        font-weight: 300;
+        @include adaptiv-value(" font-size", 15, 11.69, 1000, 640);
+        @include adaptiv-value(" font-size", 11.69, 11.69, 640, 320);
+        line-height: 120%;
+        color: #000000;
+    }
+    &__icon {
+        img {
+            width: 100%;
+        }
+        @media (min-width: $breakpoints-medium) and (max-width: 999px) {
+            width: 35px;
+        }
+        @media (min-width: $breakpoints-small) and (max-width: 639px) {
+            width: 25px;
+            height: 25px;
+        }
+    }
+    &__popup {
+        position: absolute;
+        top: 95%;
+        left: 1%;
+        visibility: hidden;
+        opacity: 0;
+        color: $text-color2;
+    }
+}

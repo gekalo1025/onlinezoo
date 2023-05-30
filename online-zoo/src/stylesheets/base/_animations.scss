@@ -1,0 +1,93 @@
+@keyframes move-left {
+    0% {
+        left: -1180px;
+        opacity: 0.7;
+    }
+    100% {
+        opacity: 1;
+
+        left: 0px;
+    }
+}
+@keyframes move-left-1250 {
+    0% {
+        left: -104%;
+        opacity: 0.7;
+    }
+    100% {
+        left: 0px;
+        opacity: 1;
+    }
+}
+@keyframes move-left-640 {
+    0% {
+        left: -106%;
+        opacity: 0.7;
+    }
+    100% {
+        left: 0%;
+        opacity: 1;
+    }
+}
+@keyframes move-right {
+    0% {
+        left: -1180px;
+        opacity: 0.7;
+    }
+    100% {
+        left: -2360px;
+        opacity: 1;
+    }
+}
+@keyframes move-right-1250 {
+    0% {
+        left: -104%;
+        opacity: 0.7;
+    }
+    100% {
+        left: -208%;
+        opacity: 1;
+    }
+}
+@keyframes move-right-640 {
+    0% {
+        left: -106%;
+        opacity: 0.7;
+    }
+    100% {
+        left: -213%;
+        opacity: 1;
+    }
+}
+.transition-left {
+    animation-name: move-left;
+    @media (min-width: $breakpoints-large) and (max-width: 1250px) {
+        animation-name: move-left-1250;
+    }
+    @media (min-width: $breakpoints-medium) and (max-width: $breakpoints-large) {
+        animation-name: move-left-640;
+    }
+    animation-duration: 1.5s;
+}
+.transition-right {
+    animation-name: move-right;
+    @media (min-width: $breakpoints-large) and (max-width: 1250px) {
+        animation-name: move-right-1250;
+    }
+    @media (min-width: $breakpoints-medium) and (max-width: $breakpoints-large) {
+        animation-name: move-right-640;
+    }
+    animation-duration: 1.5s;
+}
+@keyframes transition-testimonials {
+    0% {
+        opacity: 0.7;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.transition-testimonials {
+    animation-name: transition-testimonials;
+    animation-duration: 0.5s;
+}
